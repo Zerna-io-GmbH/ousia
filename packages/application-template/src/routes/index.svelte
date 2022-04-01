@@ -1,18 +1,35 @@
-<h1 class="text-3xl font-bold underline">
-  Hello OUSIA!
-</h1>
+<main>
+    <section class="min-h-screen flex justify-center items-center">
+        <ul role="list" class="flex flex-wrap gap-8">
+            <li id="box-1" class="bg-white w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="2">
+                1
+            </li>
+            <li class="bg-yellow-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="1.5">
+                2
+            </li>
+            <li class="bg-green-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="1">
+                3
+            </li>
+            <li class="bg-purple-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="0.5">
+                4
+            </li>
+        </ul>
+    </section>
+    <section class="min-h-screen flex justify-center items-center">
+        <ul role="list" class="flex flex-wrap gap-8">
+            <li class="bg-blue-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="0.5">
+                5
+            </li>
+            <li class="bg-pink-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="1">
+                6
+            </li>
+            <li class="bg-red-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="1.5">
+                7
+            </li>
+            <li class="bg-purple-200 w-24 h-24 shadow rounded-lg flex justify-center items-center" data-speed="2">
+                8
+            </li>
+        </ul>
+    </section>
 
-<div class="px-4 py-8 bg-white">
-  <div class="max-w-3xl mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-around">
-    <button type="button" class="btn btn--xs">Button text</button>
-
-    <button type="button" class="btn btn--sm">Button text</button>
-
-    <button type="button" class="btn">Button text</button>
-
-    <button type="button" class="btn btn--lg">Button text</button>
-
-    <button type="button" class="btn btn--xl">Button text</button>
-
-  </div>
-</div>
+</main>
