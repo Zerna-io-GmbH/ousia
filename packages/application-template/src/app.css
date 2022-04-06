@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 @layer components {
-    .btn {
-        @apply inline-flex items-center;
-        @apply px-4 py-2;
-        @apply border border-gray-300 rounded-md;
-        @apply shadow-sm text-sm font-medium text-gray-700 bg-white;
-        @apply ease-linear transition-all duration-150;
-        @apply hover:bg-gray-50;
-        @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
-    }
+	.btn {
+		@apply inline-flex items-center;
+		@apply px-4 py-2;
+		@apply border border-gray-300 rounded-md;
+		@apply shadow-sm text-sm font-medium text-gray-700 bg-white;
+		@apply ease-linear transition-all duration-150;
+		@apply hover:bg-gray-50;
+		@apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+	}
 
-    .btn--xs {
-        @apply px-2.5 py-1.5 text-xs;
-    }
+	.btn--xs {
+		@apply px-2.5 py-1.5 text-xs;
+	}
 
-    .btn--sm {
-        @apply px-3 py-2 leading-4;
-    }
+	.btn--sm {
+		@apply px-3 py-2 leading-4;
+	}
 
-    .btn--lg {
-        @apply px-4 py-2 text-base;
-    }
+	.btn--lg {
+		@apply px-4 py-2 text-base;
+	}
 
-    .btn--xl {
-        @apply px-6 py-3 text-base;
-    }
+	.btn--xl {
+		@apply px-6 py-3 text-base;
+	}
 }
