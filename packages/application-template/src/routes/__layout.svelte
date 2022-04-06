@@ -19,7 +19,6 @@
   })
 
   function scrollToTop() {
-      console.log(smoother);
       if (smoother) {
           smoother.scrollTo(0, true, "center center");
       }
