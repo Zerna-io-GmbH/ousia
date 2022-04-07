@@ -1,0 +1,21 @@
+query allPosts {
+	posts {
+		...PostSummary
+	}
+}
+
+fragment PostSummary on Post {
+	title
+	author {
+		picture {
+			url
+		}
+	}
+	slug
+	date
+	excerpt
+	tags
+	coverImage {
+		url
+	}
+}
