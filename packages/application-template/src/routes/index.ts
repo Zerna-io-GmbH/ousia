@@ -1,29 +1,10 @@
 import type { PostSummaryFragment } from '$lib/types/graphql';
 import { client } from '$lib/clients/graphql-client';
-import { gql } from 'graphql-request';
+import { allPosts } from '$lib/post/queries';
 
 export const get = async () => {
 	try {
-		const query = gql`
-			query Posts {
-				posts {
-					title
-					author {
-						picture {
-							url
-						}
-					}
-					slug
-					date
-					excerpt
-					tags
-					coverImage {
-						url
-					}
-				}
-			}
-		`;
-		const { posts }: { posts: PostSummaryFragment } = await client.request(query);
+		const { posts }: { posts: PostSummaryFragment } = await client.request(allPosts);
 		return {
 			status: 200,
 			body: { posts }
