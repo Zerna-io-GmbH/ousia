@@ -1,16 +1,6 @@
-<script context="module" lang="ts">
+<script lang="ts">
 	import type { PostSummaryFragment } from '$lib/types/graphql';
 
-	export const load = async ({ fetch }) => {
-		const res = await fetch('/posts.json');
-		const { posts }: { posts: PostSummaryFragment } = await res.json();
-		return {
-			props: { posts }
-		};
-	};
-</script>
-
-<script lang="ts">
 	export let posts: PostSummaryFragment[];
 
 	function calcDataSpeed(index: number): number {
