@@ -1,0 +1,11 @@
+/**
+ * Not functional at the moment because of playwright errors with typescript.
+ * @Todo: Find working solution.
+ */
+
+import { expect, test } from '@playwright/test';
+
+test('index page has expected h1', async ({ page }) => {
+	await page.goto('/');
+	expect(await page.textContent('h1')).toBe('Hello OUSIA');
+});

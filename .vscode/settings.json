@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "graphql",
-        "landing"
+        "landing",
+        "zerna.io"
     ]
 }
