@@ -21,10 +21,10 @@
 	});
 </script>
 
-<div id="wrapper" class="wrapper relative overflow-hidden max-w-7xl mx-auto px-6 lg:px-8">
+<div id="wrapper" class="wrapper relative overflow-hidden max-w-7xl mx-auto px-4 lg:px-8">
 	<div id="content">
 		<Navigation />
-		<main class="flex flex-col">
+		<main class="grid">
 			<slot />
 		</main>
 		<Footer />

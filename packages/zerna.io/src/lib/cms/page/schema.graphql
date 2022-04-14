@@ -1,0 +1,11 @@
+fragment PageSummary on Page {
+	title
+	content {
+		html
+	}
+	slug
+	seo {
+		description
+		keywords
+	}
+}
