@@ -5,7 +5,7 @@
 <section class="min-h-screen flex justify-center items-center overflow-hidden pt-8 sm:pt-0">
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 		<div class="sm:text-center lg:text-left flex flex-col justify-center">
-			<h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-6xl  xl:text-6xl">
+			<h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-6xl">
 				<span class="block">A better way to</span>
 				<span class="block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400"
 					>ship web apps</span
@@ -54,7 +54,7 @@
 
 <section class="min-h-screen flex justify-center items-center overflow-hidden pt-8 sm:pt-0">
 	<div
-		class="bg-white w-full shadow-lg shadow-slate-100/40 overflow-hidden shadow rounded-lg divide-y divide-gray-200"
+		class="bg-white w-full shadow-lg shadow-slate-100/40 overflow-hidden rounded-lg divide-y divide-gray-200"
 	>
 		<div class="px-4 py-5 sm:px-6" />
 		<div class="px-4 py-5 sm:p-6">

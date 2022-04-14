@@ -14,7 +14,7 @@
 	<nav aria-label="Global" class="flex items-center justify-between">
 		<div class="flex items-center flex-1">
 			<div class="flex items-center justify-between w-full md:w-auto">
-				<a href="#">
+				<a href="/">
 					<span class="sr-only">Workflow</span>
 					<div class="h-8 w-auto sm:h-10">
 						<Logo strokeColor="white" />
@@ -48,13 +48,7 @@
 				</div>
 			</div>
 			<div class="hidden space-x-8 md:flex md:ml-10 justify-center">
-				<a href="#" class="text-base font-medium text-white hover:text-gray-300">Product</a>
-
-				<a href="#" class="text-base font-medium text-white hover:text-gray-300">Features</a>
-
-				<a href="#" class="text-base font-medium text-white hover:text-gray-300">Marketplace</a>
-
-				<a href="#" class="text-base font-medium text-white hover:text-gray-300">Company</a>
+				<a href="/terms" class="text-base font-medium text-white hover:text-gray-300">Terms</a>
 			</div>
 		</div>
 		<div class="hidden md:flex md:items-center md:space-x-6">
@@ -106,27 +100,9 @@
 				<div class="pt-5 pb-6">
 					<div class="px-2 space-y-1">
 						<a
-							href="#"
+							href="/terms"
 							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Product</a
-						>
-
-						<a
-							href="#"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Features</a
-						>
-
-						<a
-							href="#"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Marketplace</a
-						>
-
-						<a
-							href="#"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Company</a
+							>Terms</a
 						>
 					</div>
 					<div class="mt-6 px-5">
