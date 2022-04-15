@@ -66,6 +66,8 @@ importers:
 
   packages/zerna.io:
     specifiers:
+      '@felte/reporter-svelte': ^1.0.5
+      '@felte/validator-yup': ^1.0.5
       '@graphql-codegen/cli': 2.6.2
       '@graphql-codegen/introspection': 2.1.1
       '@graphql-codegen/typescript': 2.4.8
@@ -85,6 +87,7 @@ importers:
       eslint: ^7.32.0
       eslint-config-prettier: ^8.3.0
       eslint-plugin-svelte3: ^3.2.1
+      felte: ^1.1.7
       graphql: ^16.3.0
       graphql-request: ^4.2.0
       gsap: npm:@gsap/business@^3.10.2
@@ -97,7 +100,10 @@ importers:
       tailwindcss: ^3.0.23
       tslib: ^2.3.1
       typescript: ~4.6.2
+      yup: ^0.32.11
     devDependencies:
+      '@felte/reporter-svelte': 1.0.5_svelte@3.46.4
+      '@felte/validator-yup': 1.0.5_yup@0.32.11
       '@graphql-codegen/cli': 2.6.2_graphql@16.3.0+typescript@4.6.3
       '@graphql-codegen/introspection': 2.1.1_graphql@16.3.0
       '@graphql-codegen/typescript': 2.4.8_graphql@16.3.0
@@ -117,6 +123,7 @@ importers:
       eslint: 7.32.0
       eslint-config-prettier: 8.5.0_eslint@7.32.0
       eslint-plugin-svelte3: 3.4.1_eslint@7.32.0+svelte@3.46.4
+      felte: 1.1.7_svelte@3.46.4
       graphql: 16.3.0
       graphql-request: 4.2.0_graphql@16.3.0
       gsap: /@gsap/business/3.10.2
@@ -129,6 +136,7 @@ importers:
       tailwindcss: 3.0.23_autoprefixer@10.4.4
       tslib: 2.3.1
       typescript: 4.6.3
+      yup: 0.32.11
 
 packages:
 
@@ -950,6 +958,38 @@ packages:
       - supports-color
     dev: true
 
+  /@felte/common/1.0.4:
+    resolution: {integrity: sha512-KCH0mpOzEtp06AhCqu6egm9cEQ8TGUtt1LfiUTxnT+sGBBQi/qvcx15btZvoG4tG6+H08d/wlhpE0Jps0X7vdQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
+
+  /@felte/core/1.2.5:
+    resolution: {integrity: sha512-fMqlmbvYMAwpv3Syz9PTPFS+H3lbKvGUiZ5gOqQol8SeqLjFsbHalT1fasKitBcBkAcP3bchKSosAJCK3T2Chw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@felte/common': 1.0.4
+    dev: true
+
+  /@felte/reporter-svelte/1.0.5_svelte@3.46.4:
+    resolution: {integrity: sha512-N6lfQod9nmw++7+BJztqFXRWEys2W3VNUuQ2lIF2gXWNivCLgzcCVEaMZMHM27zWR0pbqgDZrZZ40ny4WT4jbQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      svelte: ^3.31.0
+    dependencies:
+      '@felte/common': 1.0.4
+      svelte: 3.46.4
+    dev: true
+
+  /@felte/validator-yup/1.0.5_yup@0.32.11:
+    resolution: {integrity: sha512-p9E9aa32hSQsQ+h+SEDHlKBVjyiNb70rbl7Q3gaf1Vnt6unzt7rBcSS8j9QmT5zACqkBxTX9r/RBcNQ45Hnelw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      yup: ^0.32.9
+    dependencies:
+      '@felte/common': 1.0.4
+      yup: 0.32.11
+    dev: true
+
   /@graphql-codegen/cli/2.6.2_graphql@16.3.0+typescript@4.6.3:
     resolution: {integrity: sha512-UO75msoVgvLEvfjCezM09cQQqp32+mR8Ma1ACsBpr7nroFvHbgcu2ulx1cMovg4sxDBCsvd9Eq/xOOMpARUxtw==}
     hasBin: true
@@ -1689,6 +1729,10 @@ packages:
     resolution: {integrity: sha512-zm6xBQpFDIDM6o9r6HSgDeIcLy82TKWctCXEPbJJcXb5AKmi5BNNdLXneixK4lplX3PqIVcwLBCGE/kAGnlD4A==}
     dependencies:
       '@types/node': 17.0.23
+    dev: true
+
+  /@types/lodash/4.14.181:
+    resolution: {integrity: sha512-n3tyKthHJbkiWhDZs3DkhkCzt2MexYHXlX0td5iMplyfwketaOeKboEVBqzceH7juqvEg3q5oUoBFxSLu7zFag==}
     dev: true
 
   /@types/node/17.0.23:
@@ -3360,6 +3404,16 @@ packages:
       pend: 1.2.0
     dev: true
 
+  /felte/1.1.7_svelte@3.46.4:
+    resolution: {integrity: sha512-hvwi79UDRybKU3ybUzJFYt1aly0FKXxdPcWfXaCxTALTZ9yRVhT3lZG4YHUoyGsuWljerUp9v3i8KCLCPcpGjQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      svelte: ^3.31.0
+    dependencies:
+      '@felte/core': 1.2.5
+      svelte: 3.46.4
+    dev: true
+
   /figures/1.7.0:
     resolution: {integrity: sha1-y+Hjr/zxzUS4DK3+0o3Hk6lwHS4=}
     engines: {node: '>=0.10.0'}
@@ -4201,6 +4255,10 @@ packages:
       p-locate: 4.1.0
     dev: true
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
+
   /lodash.castarray/4.4.0:
     resolution: {integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=}
     dev: true
@@ -4465,6 +4523,10 @@ packages:
 
   /mute-stream/0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
+    dev: true
+
+  /nanoclone/0.2.1:
+    resolution: {integrity: sha512-wynEP02LmIbLpcYw8uBKpcfF6dmg2vcpKqxeH5UcoKEYdExslsdUA4ugFauuaeYdTB76ez6gJW8XAZ6CgkXYxA==}
     dev: true
 
   /nanoid/3.3.2:
@@ -5217,6 +5279,10 @@ packages:
       graceful-fs: 4.2.9
       retry: 0.12.0
       signal-exit: 3.0.7
+    dev: true
+
+  /property-expr/2.0.5:
+    resolution: {integrity: sha512-IJUkICM5dP5znhCckHSv30Q4b5/JA5enCtkRHYaOVOAocnH/1BQEYTC5NMfT3AVl/iXKdr3aqQbQn9DxyWknwA==}
     dev: true
 
   /proxy-from-env/1.1.0:
@@ -6018,6 +6084,10 @@ packages:
       is-number: 7.0.0
     dev: true
 
+  /toposort/2.0.2:
+    resolution: {integrity: sha1-riF2gXXRVZ1IvvNUILL0li8JwzA=}
+    dev: true
+
   /tr46/0.0.3:
     resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}
     dev: true
@@ -6373,4 +6443,17 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  /yup/0.32.11:
+    resolution: {integrity: sha512-Z2Fe1bn+eLstG8DRR6FTavGD+MeAwyfmouhHsIUgaADz8jvFKbO/fXc2trJKZg+5EBjh4gGm3iU/t3onKlXHIg==}
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/runtime': 7.17.9
+      '@types/lodash': 4.14.181
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      nanoclone: 0.2.1
+      property-expr: 2.0.5
+      toposort: 2.0.2
     dev: true
