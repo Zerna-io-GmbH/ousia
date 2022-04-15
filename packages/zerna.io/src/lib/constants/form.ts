@@ -1,4 +1,4 @@
 export enum FormElementVariant {
-    Input = 'input',
-    Textarea = 'textarea'
+	Input = 'input',
+	Textarea = 'textarea'
 }

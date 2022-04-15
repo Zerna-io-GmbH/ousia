@@ -17,7 +17,7 @@
 				<a href="/">
 					<span class="sr-only">Workflow</span>
 					<div class="h-8 w-auto sm:h-10">
-						<Logo strokeColor="white" />
+						<Logo style="stroke-white" />
 					</div>
 				</a>
 				<div class="-mr-2 flex items-center md:hidden">
@@ -49,7 +49,11 @@
 			</div>
 			<div class="hidden space-x-8 md:flex md:ml-10 justify-center">
 				<a href="/contact" class="text-base font-medium text-white hover:text-gray-300">Contact</a>
-				<a sveltekit:prefetch href="/terms" class="text-base font-medium text-white hover:text-gray-300">Terms</a>
+				<a
+					sveltekit:prefetch
+					href="/terms"
+					class="text-base font-medium text-white hover:text-gray-300">Terms</a
+				>
 			</div>
 		</div>
 		<div class="hidden md:flex md:items-center md:space-x-6">
@@ -63,15 +67,16 @@
 		</div>
 	</nav>
 	{#if mobileMenuOpened}
-		<div
-			class="absolute top-0 inset-x-0 transition transform origin-top md:hidden "
-			transition:fade={{ duration }}
-		>
+		<div class="absolute z-50 top-0 inset-x-0 origin-top md:hidden " transition:fade={{ duration }}>
 			<div class="rounded-lg shadow-md bg-white  ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div class="px-5 pt-4 flex items-center justify-between">
 					<div class="h-8 w-auto">
-						<Logo />
+						<a href="/">
+							<span class="sr-only">Workflow</span>
+							<Logo />
+						</a>
 					</div>
+
 					<div class="-mr-2">
 						<button
 							on:click={toggle}
@@ -101,10 +106,10 @@
 				<div class="pt-5 pb-6">
 					<div class="px-2 space-y-1">
 						<a
-						href="/terms"
-						class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-						>Contact</a
-					>
+							href="/contact"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+							>Contact</a
+						>
 						<a
 							href="/terms"
 							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"

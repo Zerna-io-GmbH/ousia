@@ -1,10 +1,11 @@
-<script>
-	export let strokeColor = 'black';
+<script lang="ts">
+	export let style: string = 'stroke-slate-900';
 </script>
 
 <svg
 	height="100%"
 	stroke-miterlimit="10"
+	class={style}
 	version="1.1"
 	viewBox="0 0 500 500"
 	width="100%"
@@ -19,7 +20,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -29,7 +29,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -39,7 +38,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -49,7 +47,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -59,7 +56,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -69,7 +65,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -79,7 +74,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -89,7 +83,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -99,7 +92,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -109,7 +101,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -119,7 +110,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -131,7 +121,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -141,7 +130,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -151,7 +139,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -161,7 +148,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -171,7 +157,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -181,7 +166,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -191,7 +175,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -201,7 +184,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -211,7 +193,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"
@@ -221,7 +202,6 @@
 			fill="none"
 			fill-rule="evenodd"
 			opacity="1"
-			stroke={strokeColor}
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			stroke-width="20.384"

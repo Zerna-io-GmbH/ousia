@@ -1,11 +1,11 @@
-import type { PageSummaryFragment } from "$lib/types/graphql"
-import { client } from "$lib/clients/graphql-client";
-import { pageBySlug } from "$lib/cms/page/queries";
+import type { PageSummaryFragment } from '$lib/types/graphql';
+import { client } from '$lib/clients/graphql-client';
+import { pageBySlug } from '$lib/cms/page/queries';
 
 export const get = async () => {
 	try {
 		const variables = {
-			slug: "terms"
+			slug: 'terms'
 		};
 		const { page }: { page: PageSummaryFragment } = await client.request(pageBySlug, variables);
 		return {
@@ -19,6 +19,6 @@ export const get = async () => {
 			body: {
 				error: 'error'
 			}
-		}
+		};
 	}
-}
+};

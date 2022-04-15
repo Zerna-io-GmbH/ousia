@@ -2,7 +2,7 @@
 	import { createForm } from 'felte';
 	import { validator } from '@felte/validator-yup';
 	import { reporter } from '@felte/reporter-svelte';
-    import * as yup from 'yup';
+	import * as yup from 'yup';
 	import { FormElementVariant } from '$lib/constants/form';
 	import FormElement from '$lib/components/form/FormElement.svelte';
 
@@ -214,7 +214,7 @@
 			</div>
 			<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
 				<h3 class="text-lg font-medium text-slate-900">Send us a message</h3>
-				<form use:form class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+				<form use:form class="mt-6 grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-8">
 					<div>
 						<FormElement
 							name="firstName"
