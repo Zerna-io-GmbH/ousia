@@ -13,17 +13,17 @@ export const allPages = gql`
 `;
 
 export const pageBySlug = gql`
-query PageBySlug($slug: String!) {
-    page(where: {slug: $slug}) {
-      title,
-      content {
-        html
-      },
-      slug,
-      seo {
-        description
-        keywords
-      }
-    }
-}
+	query PageBySlug($slug: String!) {
+		page(where: { slug: $slug }) {
+			title
+			content {
+				html
+			}
+			slug
+			seo {
+				description
+				keywords
+			}
+		}
+	}
 `;
