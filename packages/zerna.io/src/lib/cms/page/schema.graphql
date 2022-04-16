@@ -3,7 +3,7 @@ fragment PageSummary on Page {
 	content {
 		html
 	}
-	slug
+	key
 	seo {
 		description
 		keywords
