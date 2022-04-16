@@ -19,8 +19,13 @@
 		'text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 placeholder-slate-300';
 </script>
 
+<svelte:head>
+	<title>Contact</title>
+</svelte:head>
+
 <div>
 	<ValidationMessage for={name} let:messages>
+		{@const errorMsg = messages?.[0]}
 		<div class="flex justify-between">
 			<label for={name} class="block text-sm font-medium text-gray-900">{label}</label>
 			<span class:hidden={!note} class="text-sm text-gray-500">{note}</span>
@@ -34,7 +39,7 @@
 					id={name}
 					{autocomplete}
 					{required}
-					class={`${style} ${messages?.[0] ? styleError : styleNoError}`}
+					class={`${style} ${errorMsg ? styleError : styleNoError}`}
 					{placeholder}
 					aria-describedby="{name}-error"
 				/>
@@ -45,15 +50,15 @@
 					rows="4"
 					maxlength="500"
 					{required}
-					class={`${style} ${messages?.[0] ? styleError : styleNoError}`}
+					class={`${style} ${errorMsg ? styleError : styleNoError}`}
 					aria-describedby="message-error"
 				/>
 			{/if}
 		</div>
 		<div class="mt-1 h-5 min-h-full">
-			{#if messages?.[0]}
+			{#if errorMsg}
 				<p transition:fade class="text-sm text-red-300" id="{name}-error">
-					{messages?.[0]}
+					{errorMsg}
 				</p>
 			{/if}
 		</div>
