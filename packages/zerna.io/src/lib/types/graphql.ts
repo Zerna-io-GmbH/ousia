@@ -1490,6 +1490,7 @@ export type Page = Node & {
 	history: Array<Version>;
 	/** The unique identifier */
 	id: Scalars['ID'];
+	key?: Maybe<Scalars['String']>;
 	/** System Locale field */
 	locale: Locale;
 	/** Get the other localizations for this document */
@@ -1500,7 +1501,6 @@ export type Page = Node & {
 	publishedBy?: Maybe<User>;
 	scheduledIn: Array<ScheduledOperation>;
 	seo?: Maybe<Seo>;
-	slug?: Maybe<Scalars['String']>;
 	/** System stage field */
 	stage: Stage;
 	title: Scalars['String'];
@@ -1586,10 +1586,10 @@ export type PageCreateInput = {
 	/** content input for default locale (en) */
 	content?: InputMaybe<Scalars['RichTextAST']>;
 	createdAt?: InputMaybe<Scalars['DateTime']>;
+	key?: InputMaybe<Scalars['String']>;
 	/** Inline mutations for managing document localizations excluding the default locale */
 	localizations?: InputMaybe<PageCreateLocalizationsInput>;
 	seo?: InputMaybe<SeoCreateOneInlineInput>;
-	slug?: InputMaybe<Scalars['String']>;
 	/** title input for default locale (en) */
 	title: Scalars['String'];
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
@@ -1696,6 +1696,25 @@ export type PageManyWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	key?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	key_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	key_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	key_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	key_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	key_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	key_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	key_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	key_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	key_starts_with?: InputMaybe<Scalars['String']>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1716,25 +1735,6 @@ export type PageManyWhereInput = {
 	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
 	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
 	seo?: InputMaybe<SeoWhereInput>;
-	slug?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	slug_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	slug_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	slug_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	slug_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	slug_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	slug_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	slug_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	slug_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	slug_starts_with?: InputMaybe<Scalars['String']>;
 	updatedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1758,10 +1758,10 @@ export enum PageOrderByInput {
 	CreatedAtDesc = 'createdAt_DESC',
 	IdAsc = 'id_ASC',
 	IdDesc = 'id_DESC',
+	KeyAsc = 'key_ASC',
+	KeyDesc = 'key_DESC',
 	PublishedAtAsc = 'publishedAt_ASC',
 	PublishedAtDesc = 'publishedAt_DESC',
-	SlugAsc = 'slug_ASC',
-	SlugDesc = 'slug_DESC',
 	TitleAsc = 'title_ASC',
 	TitleDesc = 'title_DESC',
 	UpdatedAtAsc = 'updatedAt_ASC',
@@ -1771,10 +1771,10 @@ export enum PageOrderByInput {
 export type PageUpdateInput = {
 	/** content input for default locale (en) */
 	content?: InputMaybe<Scalars['RichTextAST']>;
+	key?: InputMaybe<Scalars['String']>;
 	/** Manage document localizations */
 	localizations?: InputMaybe<PageUpdateLocalizationsInput>;
 	seo?: InputMaybe<SeoUpdateOneInlineInput>;
-	slug?: InputMaybe<Scalars['String']>;
 	/** title input for default locale (en) */
 	title?: InputMaybe<Scalars['String']>;
 };
@@ -1931,6 +1931,25 @@ export type PageWhereInput = {
 	id_not_starts_with?: InputMaybe<Scalars['ID']>;
 	/** All values starting with the given string. */
 	id_starts_with?: InputMaybe<Scalars['ID']>;
+	key?: InputMaybe<Scalars['String']>;
+	/** All values containing the given string. */
+	key_contains?: InputMaybe<Scalars['String']>;
+	/** All values ending with the given string. */
+	key_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are contained in given list. */
+	key_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values that are not equal to given value. */
+	key_not?: InputMaybe<Scalars['String']>;
+	/** All values not containing the given string. */
+	key_not_contains?: InputMaybe<Scalars['String']>;
+	/** All values not ending with the given string */
+	key_not_ends_with?: InputMaybe<Scalars['String']>;
+	/** All values that are not contained in given list. */
+	key_not_in?: InputMaybe<Array<Scalars['String']>>;
+	/** All values not starting with the given string. */
+	key_not_starts_with?: InputMaybe<Scalars['String']>;
+	/** All values starting with the given string. */
+	key_starts_with?: InputMaybe<Scalars['String']>;
 	publishedAt?: InputMaybe<Scalars['DateTime']>;
 	/** All values greater than the given value. */
 	publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1951,25 +1970,6 @@ export type PageWhereInput = {
 	scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
 	scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
 	seo?: InputMaybe<SeoWhereInput>;
-	slug?: InputMaybe<Scalars['String']>;
-	/** All values containing the given string. */
-	slug_contains?: InputMaybe<Scalars['String']>;
-	/** All values ending with the given string. */
-	slug_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are contained in given list. */
-	slug_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values that are not equal to given value. */
-	slug_not?: InputMaybe<Scalars['String']>;
-	/** All values not containing the given string. */
-	slug_not_contains?: InputMaybe<Scalars['String']>;
-	/** All values not ending with the given string */
-	slug_not_ends_with?: InputMaybe<Scalars['String']>;
-	/** All values that are not contained in given list. */
-	slug_not_in?: InputMaybe<Array<Scalars['String']>>;
-	/** All values not starting with the given string. */
-	slug_not_starts_with?: InputMaybe<Scalars['String']>;
-	/** All values starting with the given string. */
-	slug_starts_with?: InputMaybe<Scalars['String']>;
 	title?: InputMaybe<Scalars['String']>;
 	/** All values containing the given string. */
 	title_contains?: InputMaybe<Scalars['String']>;
@@ -2010,7 +2010,7 @@ export type PageWhereInput = {
 /** References Page record uniquely */
 export type PageWhereUniqueInput = {
 	id?: InputMaybe<Scalars['ID']>;
-	slug?: InputMaybe<Scalars['String']>;
+	key?: InputMaybe<Scalars['String']>;
 };
 
 export type Post = Node & {
@@ -4766,7 +4766,7 @@ export enum _SystemDateTimeFieldVariation {
 export type PageSummaryFragment = {
 	__typename?: 'Page';
 	title: string;
-	slug?: string | null;
+	key?: string | null;
 	content?: { __typename?: 'RichText'; html: string } | null;
 	seo?: { __typename?: 'Seo'; description?: string | null; keywords: Array<string> } | null;
 };

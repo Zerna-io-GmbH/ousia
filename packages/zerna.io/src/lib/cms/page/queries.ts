@@ -1,9 +1,11 @@
+import type { PageSummaryFragment } from '$lib/types/graphql';
+import { client } from '$lib/clients/graphql-client';
 import { gql } from 'graphql-request';
 
 export const allPages = gql`
 	query AllPages {
 		pages {
-			slug
+			key
 			seo {
 				description
 				keywords
@@ -12,14 +14,14 @@ export const allPages = gql`
 	}
 `;
 
-export const pageBySlug = gql`
-	query PageBySlug($slug: String!) {
-		page(where: { slug: $slug }) {
+export const pageByKey = gql`
+	query PageBySlug($key: String!) {
+		page(where: { key: $key }) {
 			title
 			content {
 				html
 			}
-			slug
+			key
 			seo {
 				description
 				keywords
@@ -27,3 +29,23 @@ export const pageBySlug = gql`
 		}
 	}
 `;
+
+export const getPageSummary = async (key: string) => {
+	try {
+		const variables = {
+			key
+		};
+		const { page }: { page: PageSummaryFragment } = await client.request(pageByKey, variables);
+		return {
+			status: 200,
+			body: { page }
+		};
+	} catch (e) {
+		return {
+			status: e.status,
+			body: {
+				error: 'error'
+			}
+		};
+	}
+};
