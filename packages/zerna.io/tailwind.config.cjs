@@ -1,5 +1,5 @@
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/@ousia/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {}
 	},
