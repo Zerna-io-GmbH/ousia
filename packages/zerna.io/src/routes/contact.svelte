@@ -3,8 +3,7 @@
 	import { validator } from '@felte/validator-yup';
 	import { reporter } from '@felte/reporter-svelte';
 	import * as yup from 'yup';
-	import { FormElementVariant } from '$lib/constants/form';
-	import FormElement from '$lib/components/form/FormElement.svelte';
+	import { FormElement, FormElementVariant } from '@ousia/application-ui';
 
 	const schema = yup.object().shape({
 		firstName: yup.string().required(),
