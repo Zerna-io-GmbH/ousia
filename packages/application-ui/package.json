@@ -1,12 +1,13 @@
 {
-	"name": "@ousia/zerna.io",
+	"name": "@ousia/application-ui",
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "env-cmd svelte-kit dev",
-		"build": "svelte-kit build",
 		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync",
+		"build:major": "pnpm --no-git-tag-version version major && pnpm run package && cd package && pnpm publish",
+		"build:minor": "pnpm --no-git-tag-version version minor && pnpm run package && cd package && pnpm publish",
+		"build:patch": "pnpm --no-git-tag-version version patch && pnpm run package && cd package && pnpm publish",
+		"build:patch:nopub": "pnpm --no-git-tag-version version patch && pnpm run package",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -16,18 +17,14 @@
 	},
 	"devDependencies": {
 		"@felte/reporter-svelte": "^1.0.5",
-		"@felte/validator-yup": "^1.0.5",
 		"@graphql-codegen/cli": "2.6.2",
 		"@graphql-codegen/introspection": "2.1.1",
 		"@graphql-codegen/typescript": "2.4.8",
 		"@graphql-codegen/typescript-operations": "2.3.5",
-		"@ousia/application-ui": "workspace:^1.0.0",
 		"@playwright/test": "^1.20.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.29",
 		"@sveltejs/kit": "next",
-		"@tailwindcss/aspect-ratio": "^0.4.0",
-		"@tailwindcss/forms": "^0.5.0",
 		"@tailwindcss/typography": "^0.5.2",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
@@ -37,7 +34,6 @@
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
-		"felte": "^1.1.7",
 		"graphql": "^16.3.0",
 		"graphql-request": "^4.2.0",
 		"gsap": "npm:@gsap/business@^3.10.2",
@@ -47,10 +43,10 @@
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.2.6",
 		"svelte-preprocess": "^4.10.1",
+		"svelte2tsx": "^0.5.9",
 		"tailwindcss": "^3.0.23",
 		"tslib": "^2.3.1",
-		"typescript": "~4.6.2",
-		"yup": "^0.32.11"
+		"typescript": "~4.6.2"
 	},
 	"type": "module"
 }
