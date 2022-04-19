@@ -4,6 +4,7 @@
 	import { reporter } from '@felte/reporter-svelte';
 	import * as yup from 'yup';
 	import { FormElement, FormElementVariant } from '@ousia/application-ui';
+	import { animationExample } from '@ousia/application-ui';
 
 	const schema = yup.object().shape({
 		firstName: yup.string().required(),
@@ -26,7 +27,10 @@
 	<div class="bg-white overflow-hidden rounded-lg w-full max-w-5xl">
 		<h2 class="sr-only">Contact us</h2>
 		<div class="grid grid-cols-1 lg:grid-cols-3">
-			<div class="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
+			<div
+				use:animationExample
+				class="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12"
+			>
 				<div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
 					<svg
 						class="absolute inset-0 w-full h-full"
@@ -212,7 +216,7 @@
 				</ul>
 			</div>
 			<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-				<h3 class="text-lg font-medium text-slate-900">Send us a message</h3>
+				<h3 class="text-lg font-medium text-slate-900" use:animationExample>Send us a message</h3>
 				<form use:form class="mt-6 grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-8">
 					<div>
 						<FormElement
