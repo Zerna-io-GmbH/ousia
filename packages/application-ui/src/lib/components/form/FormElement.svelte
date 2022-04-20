@@ -12,17 +12,17 @@
 	export let placeholder: string = '';
 	export let note: string = '';
 
-	const style = 'block transition-colors py-3 px-4 w-full shadow-sm rounded-md';
-	const styleError =
-		'border-red-300 text-red-900 placeholder-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500';
-	const styleNoError =
-		'text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 placeholder-slate-300';
+	const classes = 'block py-3 px-4 w-full shadow-sm rounded-md focus:outline-none';
+	const classesInvalid =
+		'text-red-900 border-red-300 placeholder-red-300 focus:ring-red-500 focus:border-red-500';
+	const classesValid =
+		'text-gray-900 border-gray-300 placeholder-slate-300 focus:ring-indigo-500 focus:border-indigo-500';
 </script>
 
 <ValidationMessage for={name} let:messages>
-	{@const errorMsg = messages?.[0]}
+	{@const hasError = messages?.[0]}
 	<div class="flex justify-between">
-		<label for={name} class="block text-sm font-medium text-gray-900">{label}</label>
+		<label for={name} class="block text-sm font-medium text-slate-900">{label}</label>
 		<span class:hidden={!note} class="text-sm text-gray-500">{note}</span>
 	</div>
 
@@ -34,9 +34,10 @@
 				id={name}
 				{autocomplete}
 				{required}
-				class={`${style} ${errorMsg ? styleError : styleNoError}`}
 				{placeholder}
+				transition:fade|local
 				aria-describedby="{name}-error"
+				class="{classes} {hasError ? classesInvalid : classesValid}"
 			/>
 		{:else if variant === FormElementVariant.Textarea}
 			<textarea
@@ -45,15 +46,16 @@
 				rows="4"
 				maxlength="500"
 				{required}
-				class={`${style} ${errorMsg ? styleError : styleNoError}`}
-				aria-describedby="message-error"
+				transition:fade|local
+				class="{classes} {hasError ? classesInvalid : classesValid}"
+				aria-describedby="{name}-error"
 			/>
 		{/if}
 	</div>
 	<div class="mt-1 h-5 min-h-full">
-		{#if errorMsg}
-			<p transition:fade class="text-sm text-red-300" id="{name}-error">
-				{errorMsg}
+		{#if hasError}
+			<p transition:fade|local class="text-sm text-red-300" id="{name}-error">
+				{hasError}
 			</p>
 		{/if}
 	</div>

@@ -69,6 +69,7 @@ importers:
   packages/application-ui:
     specifiers:
       '@felte/reporter-svelte': ^1.0.5
+      '@felte/validator-yup': ^1.0.5
       '@graphql-codegen/cli': 2.6.2
       '@graphql-codegen/introspection': 2.1.1
       '@graphql-codegen/typescript': 2.4.8
@@ -77,6 +78,7 @@ importers:
       '@sveltejs/adapter-auto': next
       '@sveltejs/adapter-static': ^1.0.0-next.29
       '@sveltejs/kit': next
+      '@tailwindcss/forms': ^0.5.0
       '@tailwindcss/typography': ^0.5.2
       '@typescript-eslint/eslint-plugin': ^5.10.1
       '@typescript-eslint/parser': ^5.10.1
@@ -86,6 +88,7 @@ importers:
       eslint: ^7.32.0
       eslint-config-prettier: ^8.3.0
       eslint-plugin-svelte3: ^3.2.1
+      felte: ^1.1.7
       graphql: ^16.3.0
       graphql-request: ^4.2.0
       gsap: npm:@gsap/business@^3.10.2
@@ -99,8 +102,10 @@ importers:
       tailwindcss: ^3.0.23
       tslib: ^2.3.1
       typescript: ~4.6.2
+      yup: ^0.32.11
     devDependencies:
       '@felte/reporter-svelte': 1.0.5_svelte@3.46.4
+      '@felte/validator-yup': 1.0.5_yup@0.32.11
       '@graphql-codegen/cli': 2.6.2_graphql@16.3.0+typescript@4.6.3
       '@graphql-codegen/introspection': 2.1.1_graphql@16.3.0
       '@graphql-codegen/typescript': 2.4.8_graphql@16.3.0
@@ -108,7 +113,8 @@ importers:
       '@playwright/test': 1.20.1
       '@sveltejs/adapter-auto': 1.0.0-next.34
       '@sveltejs/adapter-static': 1.0.0-next.29
-      '@sveltejs/kit': 1.0.0-next.315_svelte@3.46.4
+      '@sveltejs/kit': 1.0.0-next.316_svelte@3.46.4
+      '@tailwindcss/forms': 0.5.0_tailwindcss@3.0.23
       '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.23
       '@typescript-eslint/eslint-plugin': 5.16.0_779783495dcf5ccdc83bcb9708311c62
       '@typescript-eslint/parser': 5.16.0_eslint@7.32.0+typescript@4.6.3
@@ -118,6 +124,7 @@ importers:
       eslint: 7.32.0
       eslint-config-prettier: 8.5.0_eslint@7.32.0
       eslint-plugin-svelte3: 3.4.1_eslint@7.32.0+svelte@3.46.4
+      felte: 1.1.7_svelte@3.46.4
       graphql: 16.3.0
       graphql-request: 4.2.0_graphql@16.3.0
       gsap: /@gsap/business/3.10.2
@@ -131,6 +138,7 @@ importers:
       tailwindcss: 3.0.23_autoprefixer@10.4.4
       tslib: 2.3.1
       typescript: 4.6.3
+      yup: 0.32.11
 
   packages/application-ui/package:
     specifiers:
@@ -1749,6 +1757,25 @@ packages:
 
   /@sveltejs/kit/1.0.0-next.315_svelte@3.46.4:
     resolution: {integrity: sha512-f6ufqd9z6uicOOr1eSIclm4TonwoRtw0kuIYrDatYSZtu/081kZ5r0Vj6sXDI6tFI1kctoRzPtFECXf5zkZvlw==}
+    engines: {node: '>=14.13'}
+    hasBin: true
+    peerDependencies:
+      svelte: ^3.44.0
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.40_svelte@3.46.4+vite@2.9.1
+      sade: 1.8.1
+      svelte: 3.46.4
+      vite: 2.9.1
+    transitivePeerDependencies:
+      - diff-match-patch
+      - less
+      - sass
+      - stylus
+      - supports-color
+    dev: true
+
+  /@sveltejs/kit/1.0.0-next.316_svelte@3.46.4:
+    resolution: {integrity: sha512-oLjWOWzjriJD2t210r7ALuH/8ZADrJGsOODzRCRSJvRBCt0Q7VKVLqwKbM/RlZzD1k8Af2uRodQT11kP98hAIA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
