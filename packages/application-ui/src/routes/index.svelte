@@ -12,6 +12,11 @@
 		<h3 class="text-2xl tracking-tight font-extrabold text-white pb-12">From</h3>
 		<h1 class="text-4xl tracking-tight font-extrabold text-white pb-12">Greensock</h1>
 	</section>
+	<section class="min-h-screen flex flex-col justify-center items-center">
+		<h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-6xl pb-12" n>
+			Stagger...
+		</h1>
+	</section>
 	<section class="min-h-screen flex justify-center items-center">
 		<ul class="flex flex-wrap gap-8">
 			<li
