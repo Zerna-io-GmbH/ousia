@@ -6,7 +6,7 @@
 	<title>Ousia - Application Template</title>
 </svelte:head>
 
-<main class="container mx-auto">
+<main class="grid container mx-auto">
 	<section class="min-h-screen flex flex-col justify-center items-center" use:animationExample>
 		<h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-6xl pb-12">Hi</h1>
 		<h3 class="text-2xl tracking-tight font-extrabold text-white pb-12">From</h3>

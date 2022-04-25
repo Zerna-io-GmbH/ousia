@@ -2,10 +2,6 @@
 	import type { PostSummaryFragment } from '$lib/types/graphql';
 
 	export let posts: PostSummaryFragment[];
-
-	function calcDataSpeed(index: number): number {
-		return index + 0.5;
-	}
 </script>
 
 <svelte:head>
@@ -14,41 +10,9 @@
 
 <main class="container mx-auto">
 	<section class="min-h-screen flex justify-center items-center">
-		<ul class="flex flex-wrap gap-8">
-			<li
-				id="box-1"
-				class="bg-white w-24 h-24 shadow rounded-lg flex justify-center items-center"
-				data-speed="2"
-			>
-				1
-			</li>
-			<li
-				class="bg-yellow-200 w-24 h-24 shadow rounded-lg flex justify-center items-center"
-				data-speed="1.5"
-			>
-				2
-			</li>
-			<li
-				class="bg-green-200 w-24 h-24 shadow rounded-lg flex justify-center items-center"
-				data-speed="1"
-			>
-				3
-			</li>
-			<li
-				class="bg-purple-200 w-24 h-24 shadow rounded-lg flex justify-center items-center"
-				data-speed="0.5"
-			>
-				4
-			</li>
-		</ul>
-	</section>
-	<section class="min-h-screen flex justify-center items-center">
 		<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{#each posts as post, i}
-				<li
-					class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200"
-					data-speed={calcDataSpeed(i)}
-				>
+				<li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
 					<div class="w-full flex items-center justify-between p-6 space-x-6">
 						<div class="flex-1 truncate">
 							<div class="flex items-center space-x-3">
