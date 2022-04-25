@@ -3,6 +3,7 @@
         "graphql",
         "landing",
         "zerna.io",
-        "application-ui"
+        "application-ui",
+        "application-template"
     ]
 }
