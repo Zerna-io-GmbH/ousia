@@ -4,6 +4,7 @@
         "landing",
         "zerna.io",
         "application-ui",
-        "application-template"
+        "application-template",
+        "all-packages"
     ]
 }
