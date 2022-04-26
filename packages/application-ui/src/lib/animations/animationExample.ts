@@ -1,4 +1,4 @@
-import { gsap } from 'gsap/dist/gsap';
+import { gsap } from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText.js';
 
 export const animationExample = (node) => {

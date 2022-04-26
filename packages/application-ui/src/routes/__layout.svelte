@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '../app.css';
 	import OusiaAppLayout from '$lib/components/layout/OusiaAppLayout.svelte';
-	import { gsap } from 'gsap/dist/gsap';
-	import { SplitText } from 'gsap/dist/SplitText.js';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
+	import { gsap } from 'gsap';
+	import { SplitText } from 'gsap/dist/SplitText';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	gsap.registerPlugin(SplitText, ScrollTrigger);
 </script>
 

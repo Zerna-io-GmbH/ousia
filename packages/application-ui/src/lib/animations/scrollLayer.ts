@@ -1,4 +1,4 @@
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
 
 export const scrollLayer = (node) => {
 	const trigger = ScrollTrigger.create({
