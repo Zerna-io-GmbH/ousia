@@ -2,6 +2,7 @@
 	import { ValidationMessage } from '@felte/reporter-svelte';
 	import { fade } from 'svelte/transition';
 	import { FormElementVariant } from '$lib/constants/form';
+	import { a11yFly } from '$lib/stores/transitions';
 
 	export let variant: FormElementVariant = FormElementVariant.Input;
 	export let name: string;
@@ -54,7 +55,7 @@
 	</div>
 	<div class="mt-1 h-5 min-h-full">
 		{#if hasError}
-			<p transition:fade|local class="text-sm text-red-300" id="{name}-error">
+			<p transition:$a11yFly|local={{ x: 300 }} class="text-sm text-red-300" id="{name}-error">
 				{hasError}
 			</p>
 		{/if}
