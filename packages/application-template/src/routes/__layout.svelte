@@ -1,9 +1,8 @@
 <script lang="ts">
-	import {
-		OusiaAppLayout,
-		calculateSomething,
-		calculateSomethingElse
-	} from '@ousia/application-ui';
+	import { OusiaAppLayout } from '@ousia/application-ui/components';
+
+	import { calculateSomethingElse, calculateSomething } from '@ousia/application-ui/math';
+
 	import '../app.css';
 
 	function testLib(): void {

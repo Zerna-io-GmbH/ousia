@@ -3,8 +3,10 @@
 	import { validator } from '@felte/validator-yup';
 	import { reporter } from '@felte/reporter-svelte';
 	import * as yup from 'yup';
-	import { FormElement, FormElementVariant } from '@ousia/application-ui';
-	import { animationExample } from '@ousia/application-ui';
+	import { animationExample } from '@ousia/application-ui/animations';
+	import { FormElement } from '@ousia/application-ui/components';
+	import { FormElementVariant } from '@ousia/application-ui/constants';
+
 
 	const schema = yup.object().shape({
 		firstName: yup.string().required(),
