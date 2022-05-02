@@ -1,0 +1,4 @@
+fragment TranslationSummary on Translation {
+	key
+	value
+}
