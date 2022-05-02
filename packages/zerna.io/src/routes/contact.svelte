@@ -7,7 +7,6 @@
 	import { FormElement } from '@ousia/application-ui/components';
 	import { FormElementVariant } from '@ousia/application-ui/constants';
 
-
 	const schema = yup.object().shape({
 		firstName: yup.string().required(),
 		lastName: yup.string().required(),

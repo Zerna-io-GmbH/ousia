@@ -1,9 +1,9 @@
-import type { PageSummaryFragment } from '$lib/types/graphql';
+import type { PageSummaryFragment } from '$lib/generated/graphql';
 import { client } from '$lib/clients/graphql-client';
 import { gql } from 'graphql-request';
 
 export const allPages = gql`
-	query AllPages {
+	query {
 		pages {
 			key
 			seo {
@@ -15,7 +15,7 @@ export const allPages = gql`
 `;
 
 export const pageByKey = gql`
-	query PageBySlug($key: String!) {
+	query ($key: String!) {
 		page(where: { key: $key }) {
 			title
 			content {
