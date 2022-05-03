@@ -1,5 +1,18 @@
 <script lang="ts">
 	import type { TranslationUi } from '$lib/cms/translation/types';
+	import CarIcon from '$lib/svg/icons/CarIcon.svelte';
+	import HeartIcon from '$lib/svg/icons/HeartIcon.svelte';
+	import LightningBoldIcon from '$lib/svg/icons/LightningBoldIcon.svelte';
+	import ShieldIcon from '$lib/svg/icons/ShieldIcon.svelte';
+	import CloudTealIllustration from '$lib/svg/illustrations/CloudTealIllustration.svelte';
+	import DockerLogo from '$lib/svg/logos/DockerLogo.svelte';
+	import GraphQlLogo from '$lib/svg/logos/GraphQlLogo.svelte';
+	import NodeJsLogo from '$lib/svg/logos/NodeJsLogo.svelte';
+	import SvelteKitLogo from '$lib/svg/logos/SvelteKitLogo.svelte';
+	import SvgLogo from '$lib/svg/logos/SvgLogo.svelte';
+	import TailwindCssLogo from '$lib/svg/logos/TailwindCssLogo.svelte';
+	import TypescriptLogo from '$lib/svg/logos/TypescriptLogo.svelte';
+	import WebComponentsLogo from '$lib/svg/logos/WebComponentsLogo.svelte';
 
 	export let translations: TranslationUi;
 </script>
@@ -22,29 +35,25 @@
 				>
 			</h1>
 			<p class="text-base pt-3 text-gray-300 sm:text-xl sm:pt-5 lg:text-lg xl:text-xl">
-				Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo.
-				Elit sunt amet fugiat veniam occaecat fugiat.
+				{translations['landing.intro.betterWay.desc']}
 			</p>
 		</div>
 		<div class="pt-8 sm:pt-0">
-			<img
-				class="max-h-full"
-				src="https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg"
-				alt=""
-			/>
+			<CloudTealIllustration />
 		</div>
 	</div>
 </section>
 
 <section class="py-12 sm:py-20">
 	<div class="lg:text-center">
-		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">Experience</h2>
+		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">
+			{translations['landing.experience.heading']}
+		</h2>
 		<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
-			Wide Range of Industry Know-How
+			{translations['landing.experience.intro']}
 		</p>
 		<p class="mt-4 text-xl text-gray-300 lg:mx-auto">
-			Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate
-			veritatis in accusamus quisquam.
+			{translations['landing.experience.desc']}
 		</p>
 	</div>
 	<div class="mt-10">
@@ -54,30 +63,14 @@
 					<div
 						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
 					>
-						<!-- Heroicon name: outline/globe-alt -->
-						<svg
-							class="h-6 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-							/>
-						</svg>
+						<CarIcon />
 					</div>
 					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">
-						Competitive exchange rates
+						{translations['landing.experience.automotive.heading']}
 					</p>
 				</dt>
 				<dd class="mt-2 ml-16 text-base text-slate-300">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis
-					suscipit eaque, iste dolor cupiditate blanditiis ratione.
+					{translations['landing.experience.automotive.desc']}
 				</dd>
 			</div>
 
@@ -86,28 +79,14 @@
 					<div
 						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
 					>
-						<!-- Heroicon name: outline/scale -->
-						<svg
-							class="h-6 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-							/>
-						</svg>
+						<ShieldIcon />
 					</div>
-					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">No hidden fees</p>
+					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">
+						{translations['landing.experience.insurance.heading']}
+					</p>
 				</dt>
 				<dd class="mt-2 ml-16 text-base text-slate-300">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis
-					suscipit eaque, iste dolor cupiditate blanditiis ratione.
+					{translations['landing.experience.insurance.desc']}
 				</dd>
 			</div>
 
@@ -116,28 +95,14 @@
 					<div
 						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
 					>
-						<!-- Heroicon name: outline/lightning-bolt -->
-						<svg
-							class="h-6 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M13 10V3L4 14h7v7l9-11h-7z"
-							/>
-						</svg>
+						<LightningBoldIcon />
 					</div>
-					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">Transfers are instant</p>
+					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">
+						{translations['landing.experience.energy.heading']}
+					</p>
 				</dt>
 				<dd class="mt-2 ml-16 text-base text-slate-300">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis
-					suscipit eaque, iste dolor cupiditate blanditiis ratione.
+					{translations['landing.experience.energy.desc']}
 				</dd>
 			</div>
 
@@ -146,28 +111,14 @@
 					<div
 						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
 					>
-						<!-- Heroicon name: outline/annotation -->
-						<svg
-							class="h-6 w-6"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							aria-hidden="true"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-							/>
-						</svg>
+						<HeartIcon />
 					</div>
-					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">Mobile notifications</p>
+					<p class="ml-16 text-lg leading-6 font-medium text-slate-100">
+						{translations['landing.experience.dating.heading']}
+					</p>
 				</dt>
 				<dd class="mt-2 ml-16 text-base text-slate-300">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis
-					suscipit eaque, iste dolor cupiditate blanditiis ratione.
+					{translations['landing.experience.dating.desc']}
 				</dd>
 			</div>
 		</dl>
@@ -176,46 +127,70 @@
 
 <section class="py-12 sm:py-20">
 	<div class="lg:text-center">
-		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">Tech Stack</h2>
+		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">
+			{translations['landing.techstack.heading']}
+		</h2>
 		<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-100 sm:text-4xl">
-			How do we build our apps?
+			{translations['landing.techstack.intro']}
 		</p>
 		<p class="mt-4 text-xl text-slate-300 lg:mx-auto">
-			Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate
-			veritatis in accusamus quisquam.
+			{translations['landing.techstack.desc']}
 		</p>
 	</div>
-	<div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5 mx-auto">
-		<div class="col-span-1 flex justify-center py-8 px-8">
-		  <img class="max-h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Workcation">
+	<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 md:grid-cols-4 mx-auto">
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<TailwindCssLogo />
 		</div>
-		<div class="col-span-1 flex justify-center py-8 px-8">
-		  <img class="max-h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<SvelteKitLogo />
 		</div>
-		<div class="col-span-1 flex justify-center py-8 px-8">
-		  <img class="max-h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<SvgLogo />
 		</div>
-		<div class="col-span-1 flex justify-center py-8 px-8">
-		  <img class="max-h-12" src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg" alt="Laravel">
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<TypescriptLogo />
 		</div>
-		<div class="col-span-1 flex justify-center py-8 px-8">
-		  <img class="max-h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<WebComponentsLogo />
 		</div>
-		<div class="col-span-1 flex justify-center py-8 px-8">
-		  <img class="max-h-12" src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg" alt="Statamic">
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<NodeJsLogo />
 		</div>
-	  </div>
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<DockerLogo />
+		</div>
+		<div
+			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
+		>
+			<GraphQlLogo />
+		</div>
+	</div>
 </section>
 
-<section class="py-12 sm:py-20">
+<section>
 	<div class="lg:text-center">
-		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">Blog</h2>
+		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">
+			{translations['landing.blog.heading']}
+		</h2>
 		<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-100 sm:text-4xl">
-			Our Recent Publications
+			{translations['landing.blog.intro']}
 		</p>
 		<p class="mt-4 text-xl text-slate-300 lg:mx-auto">
-			Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate
-			veritatis in accusamus quisquam.
+			{translations['landing.blog.desc']}
 		</p>
 	</div>
 	<div class="grid gap-16 mt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -342,10 +317,6 @@
 	</div>
 </section>
 
-
-
-
-
 <section class="py-12 sm:py-20">
 	<div class="px-4 py-8 sm:px-8 sm:py-16 bg-indigo-600 rounded-sm">
 		<blockquote>
@@ -361,13 +332,14 @@
 					/>
 				</svg>
 				<p class="mt-6 text-2xl font-medium text-white">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae
-					laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+					{translations['landing.blockquote.desc']}
 				</p>
 			</div>
 			<footer class="mt-6">
-				<p class="text-base font-medium text-white">Judith Black</p>
-				<p class="text-base font-medium text-indigo-100">CEO at PureInsights</p>
+				<p class="text-base font-medium text-white">Michael Zerna</p>
+				<p class="text-base font-medium text-indigo-100">
+					{translations['landing.blockquote.owner']}
+				</p>
 			</footer>
 		</blockquote>
 	</div>
