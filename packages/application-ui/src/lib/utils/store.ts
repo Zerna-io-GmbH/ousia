@@ -1,6 +1,6 @@
-import { subscribe } from 'svelte/internal';
 import { derived, type Readable, type Writable } from 'svelte/store';
 import { LocalStorageUtils } from './storage';
+import { WindowUtils } from './window';
 
 export interface PersistentWritableStore<T> {
 	subscribe: (subscription: (value: T) => void) => () => void;
@@ -25,7 +25,7 @@ export class StoreUtils {
 
 	/** A wrapper around svelte/store that allows you to persist the value of a store and broadcast it to other open tabs.
 	 *
-	 * This method is heavily influcenced by the following cade:
+	 * This method is heavily influenced by the following cade:
 	 * https://github.com/omer-g/persistent-svelte-store
 	 *
 	 */
@@ -42,21 +42,23 @@ export class StoreUtils {
 			storeValue = currentValue;
 		}
 
-		let channel = new BroadcastChannel(key);
-		channel.onmessage = (event) => {
-			if (event.data === key) {
-				storeValue = LocalStorageUtils.getItem(key);
-				subscriptions.forEach((subscription) => {
-					subscription(storeValue);
-				});
-			}
-		};
+		let channel = WindowUtils.createBroadcastChannel(key);
+		if (channel) {
+			channel.onmessage = (event) => {
+				if (event.data === key) {
+					storeValue = LocalStorageUtils.getItem(key);
+					subscriptions.forEach((subscription) => {
+						subscription(storeValue);
+					});
+				}
+			};
+		}
 
 		const subscribe = (subscription: (value: T) => void) => {
 			subscription(storeValue);
 			subscriptions.push(subscription);
 			if (subscriptions.length === 1 && channel === null) {
-				channel = new BroadcastChannel(key);
+				channel = WindowUtils.createBroadcastChannel(key);
 			}
 
 			const unsubscribe = () => {
