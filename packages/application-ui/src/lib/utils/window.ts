@@ -18,4 +18,12 @@ export class WindowUtils {
 	static mediaQuery(query: string): MediaQueryList {
 		return this.isBrowser() ? window.matchMedia(query) : null;
 	}
+
+	static getPreferredLanguage(): string {
+		return this.isBrowser() ? navigator.language.split('-')[0] : null;
+	}
+
+	static hasLocalStorage(): boolean {
+		return this.isBrowser() && typeof window.localStorage !== 'undefined';
+	}
 }
