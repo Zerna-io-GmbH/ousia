@@ -26,4 +26,8 @@ export class WindowUtils {
 	static hasLocalStorage(): boolean {
 		return this.isBrowser() && typeof window.localStorage !== 'undefined';
 	}
+
+	static createBroadcastChannel(name: string): BroadcastChannel {
+		return this.isBrowser() ? new BroadcastChannel(name) : null;
+	}
 }
