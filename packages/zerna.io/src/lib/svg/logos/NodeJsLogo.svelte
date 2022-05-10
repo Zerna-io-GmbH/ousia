@@ -4,7 +4,6 @@
 	viewBox="0 0 111.4 31.458"
 	xmlns="http://www.w3.org/2000/svg"
 	width="100%"
-	height="auto"
 	class="h-10"
 >
 	<g transform="matrix(.21795 0 0 .21795 -.18678 -.083188)">

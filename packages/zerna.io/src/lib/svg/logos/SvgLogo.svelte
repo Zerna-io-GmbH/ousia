@@ -4,7 +4,6 @@
 	viewBox="0 0 70.7 27.43"
 	width="100%"
 	class="h-10"
-	height="auto"
 	xml:space="preserve"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:cc="http://creativecommons.org/ns#"
