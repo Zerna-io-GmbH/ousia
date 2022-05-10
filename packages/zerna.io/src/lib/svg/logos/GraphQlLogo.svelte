@@ -1,6 +1,5 @@
 <svg
 	width="100%"
-	height="auto"
 	class="h-10"
 	fill="#e10098"
 	version="1.1"

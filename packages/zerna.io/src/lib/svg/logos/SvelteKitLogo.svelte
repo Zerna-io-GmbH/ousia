@@ -3,7 +3,6 @@
 	viewBox="0 0 625.99 112"
 	width="100%"
 	class="h-10"
-	height="auto"
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<path
