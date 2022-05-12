@@ -1,0 +1,1 @@
+export { default as ZernaIoLogo} from './logos/ZernaIoLogo.svelte';

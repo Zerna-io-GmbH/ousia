@@ -5,6 +5,7 @@
         "zerna.io",
         "application-ui",
         "application-template",
-        "all-packages"
+        "all-packages",
+        "ousia-academy-landing"
     ]
 }
