@@ -4,6 +4,8 @@
 	"scripts": {
 		"dev": "env-cmd svelte-kit dev",
 		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"build": "svelte-kit build",
 		"build:major": "pnpm --no-git-tag-version version major && pnpm run package && cd package && pnpm publish",
 		"build:minor": "pnpm --no-git-tag-version version minor && pnpm run package && cd package && pnpm publish",
 		"build:patch": "pnpm --no-git-tag-version version patch && pnpm run package && cd package && pnpm publish",

@@ -1,10 +1,7 @@
-<script lang="ts">
-	import type { PostSummaryFragment } from '$lib/types/graphql';
+<script>
+import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/InteressengemeinschaftIllustration.svelte";
 
-	export let posts: PostSummaryFragment[];
 </script>
-
-
 <section class="py-16 px-4">
 	<div class="mx-auto max-w-7xl grid md:grid-cols-4 gap-8">
 		<div class="hidden md:block  col-span-1">
@@ -151,7 +148,7 @@
 	</div>
 </section>
 <section class="py-16 px-4">
-	<div class="lg:mx-auto lg:max-w-7xl grid lg:grid-cols-2 lg:items-center">
+	<div class="lg:mx-auto lg:max-w-7xl grid lg:grid-cols-2 gap-8">
 		<div class="relative">
 			<h2 class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 				Werde Teil unserer Interessengemeinschaft
@@ -255,8 +252,8 @@
 				</div>
 			</dl>
 		</div>
-		<div class="hidden md:block" aria-hidden="true">
-			<img class="sm:max-w-sm lg:max-w-full mx-auto" src="/illustrations/work-tv.png" alt="" />
+		<div class="mx-auto w-full hidden md:block">
+			<InteressengemeinschaftIllustration />
 		</div>
 	</div>
 </section>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Duration } from '$lib/constants/animation';
-	import ZernaIoLogo from '$lib/svg/ZernaIoLogo.svelte';
+	import ZernaIoLogo from '$lib/svg/logos/ZernaIoLogo.svelte';
 	import { fade } from 'svelte/transition';
+	import { page } from "$app/stores";
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
 
@@ -48,7 +49,7 @@
 				</div>
 			</div>
 			<div class="hidden space-x-8 md:flex md:ml-10 w-full justify-center">
-				<a href="/contact" class="text-base font-medium text-gray-500 hover:text-gray-900"
+				<a href="/theoretische-ausbildung" class:active={$page.url.pathname === "/theoretische-ausbildung"} class="text-base font-medium text-gray-500 hover:text-gray-900"
 					>Theoretische Ausbildung</a
 				>
 				<a
@@ -117,7 +118,8 @@
 				<div class="pt-5 pb-6">
 					<div class="px-2 space-y-1">
 						<a
-							href="/contact"
+							href="/theoretische-ausbildung"
+							class:active={$page.url.pathname === "/theoretische-ausbildung"}
 							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
 							>Theoretische Ausbildung</a
 						>
@@ -150,3 +152,9 @@
 		</div>
 	{/if}
 </header>
+
+<style>
+	.active {
+		text-decoration: underline;
+	}
+</style>
