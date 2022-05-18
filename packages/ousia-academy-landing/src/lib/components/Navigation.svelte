@@ -2,7 +2,8 @@
 	import { Duration } from '$lib/constants/animation';
 	import ZernaIoLogo from '$lib/svg/logos/ZernaIoLogo.svelte';
 	import { fade } from 'svelte/transition';
-	import { page } from "$app/stores";
+	import { page } from '$app/stores';
+	import { navigations } from '$lib/constants/navigation';
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
 
@@ -11,14 +12,14 @@
 	}
 </script>
 
-<header class="pt-6 max-w-7xl mx-auto px-4 sm:px-0">
+<header class="pt-6 max-w-7xl mx-auto px-4">
 	<nav aria-label="Global" class="flex items-center justify-between">
 		<div class="flex items-center flex-1">
 			<div class="flex items-center justify-between w-full md:w-auto">
 				<a href="/">
 					<span class="sr-only">Workflow</span>
 					<div class="h-8 w-auto sm:h-10">
-						<ZernaIoLogo/>
+						<ZernaIoLogo />
 					</div>
 				</a>
 				<div class="-mr-2 flex items-center md:hidden">
@@ -49,24 +50,13 @@
 				</div>
 			</div>
 			<div class="hidden space-x-8 md:flex md:ml-10 w-full justify-center">
-				<a href="/theoretische-ausbildung" class:active={$page.url.pathname === "/theoretische-ausbildung"} class="text-base font-medium text-gray-500 hover:text-gray-900"
-					>Theoretische Ausbildung</a
-				>
-				<a
-					sveltekit:prefetch
-					href="/terms"
-					class="text-base font-medium text-gray-500 hover:text-gray-900">Praktische Vertiefung</a
-				>
-				<a
-				sveltekit:prefetch
-				href="/terms"
-				class="text-base font-medium text-gray-500 hover:text-gray-900">Ideenschmiede</a
-			>
-			<a
-				sveltekit:prefetch
-				href="/terms"
-				class="text-base font-medium text-gray-500 hover:text-gray-900">Interessengemeinschaft</a
-			>
+				{#each navigations as nav}
+					<a
+						href={nav.path}
+						class:underline={$page.url.pathname === nav.path}
+						class="text-base font-medium text-gray-500 hover:text-gray-900">{nav.name}</a
+					>
+				{/each}
 			</div>
 		</div>
 		<div class="hidden md:flex md:items-center md:space-x-6">
@@ -117,28 +107,13 @@
 				</div>
 				<div class="pt-5 pb-6">
 					<div class="px-2 space-y-1">
-						<a
-							href="/theoretische-ausbildung"
-							class:active={$page.url.pathname === "/theoretische-ausbildung"}
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Theoretische Ausbildung</a
-						>
-						<a
-							href="/contact"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Praktische Vertiefung</a
-						>
-
-						<a
-							href="/terms"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Ideenschmiede</a
-						>
-						<a
-							href="/terms"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Interessengemeinschaft</a
-						>
+						{#each navigations as nav}
+							<a
+								href={nav.path}
+								class:underline={$page.url.pathname === nav.path}
+								class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">{nav.name}</a
+							>
+						{/each}
 					</div>
 					<div class="mt-6 px-5">
 						<a
@@ -152,9 +127,3 @@
 		</div>
 	{/if}
 </header>
-
-<style>
-	.active {
-		text-decoration: underline;
-	}
-</style>

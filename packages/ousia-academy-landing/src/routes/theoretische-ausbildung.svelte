@@ -8,7 +8,7 @@
 	import TypescriptLogo from '$lib/svg/logos/TypescriptLogo.svelte';
 	import WebComponentsLogo from '$lib/svg/logos/WebComponentsLogo.svelte';
 	import GithubLogo from '$lib/svg/logos/GithubLogo.svelte';
-	import OurToDoIllustration from '$lib/svg/logos/illustrations/OurToDoIllustration.svelte';
+	import OurToDoIllustration from '$lib/svg/illustrations/OurToDoIllustration.svelte';
 </script>
 
 <section class="py-16 px-4">
@@ -21,14 +21,14 @@
 			</span>
 		</div>
 		<h1
-			class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl text-center"
+			class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl text-center"
 		>
 			<span>Übernehme die</span>
 			<span class="text-blue-500">Kontrolle</span>
 			<span>über deine Zukunft.</span>
 		</h1>
 
-		<p class="mt-4 max-w-2xl text-xl text-gray-500 text-center justify-self-center">
+		<p class="mt-4 max-w-2xl text-xl text-slate-500 text-center justify-self-center">
 			Starte deinen Weg mit unseren Modulen. Lerne Design, Entwicklung, Management und
 			Bereitstellung von modernsten Web Applikationen.
 		</p>
@@ -62,7 +62,7 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+						<p class="ml-16 text-lg leading-6 font-medium text-slate-900">
 							Grundlagen eines guten UX/UI-Designs
 						</p>
 					</dt>
@@ -91,7 +91,7 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+						<p class="ml-16 text-lg leading-6 font-medium text-slate-900">
 							Einführung in die Programmierung
 						</p>
 					</dt>
@@ -121,7 +121,7 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+						<p class="ml-16 text-lg leading-6 font-medium text-slate-900">
 							Barrierefreiheit Im Web sicherstellen
 						</p>
 					</dt>
@@ -151,7 +151,7 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+						<p class="ml-16 text-lg leading-6 font-medium text-slate-900">
 							Web Anwendungen effizient managen
 						</p>
 					</dt>
@@ -181,7 +181,7 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+						<p class="ml-16 text-lg leading-6 font-medium text-slate-900">
 							Kontinuierliche Bereitstellung unserer Arbeit
 						</p>
 					</dt>
