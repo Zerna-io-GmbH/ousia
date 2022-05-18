@@ -1,7 +1,7 @@
 <script>
-import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/InteressengemeinschaftIllustration.svelte";
-
+	import InteressengemeinschaftIllustration from '$lib/svg/illustrations/InteressengemeinschaftIllustration.svelte';
 </script>
+
 <section class="py-16 px-4">
 	<div class="mx-auto max-w-7xl grid md:grid-cols-4 gap-8">
 		<div class="hidden md:block  col-span-1">
@@ -12,7 +12,7 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 				data-config-id="image8-1"
 			/>
 		</div>
-		<div class="col-span-2 grid gap-3 justify-center">
+		<div class="col-span-2 space-y-6">
 			<div class="text-center">
 				<span
 					class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-blue-100 text-blue-800"
@@ -56,7 +56,7 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 			<p class="text-xl text-gray-500">
 				Das Internet entwickelt sich wie alle Technologien weiter. Wir sind darauf vorbereitet und
 				wir möchten, dass du es auch sein wirst. Mit unserem Programm werden wir sicherstellen, dass
-				du die Technologien und das Vorgehen beherscht, um deine Ideen, oder Ideen von Anderen zum
+				du die Technologien und das Vorgehen beherrschst, um deine Ideen, oder Ideen von Anderen zum
 				Leben zu erwecken.
 			</p>
 		</div>
@@ -85,7 +85,7 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 					</h3>
 					<p class="text-base text-gray-500" data-config-id="desc1">
 						Warum kann die Entwicklung von Ideen nicht so leicht sein, wie das Zusammenbauen von
-						Lego? Wir werden erfahren, dass es durchaus so sein kann.
+						Lego? Wir werden erfahren, dass es so sein kann.
 					</p>
 				</div>
 			</div>
@@ -111,8 +111,8 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 						Praktische Vertiefung
 					</h3>
 					<p class="text-base text-gray-500" data-config-id="desc2">
-						Learning by Doing. Mit Hilfe unsere Interessengemeinschaft, werden wir erste Projekte
-						aufbauen und so unser Wissen mit praxisbezug erweitern.
+						Learning by Doing. Mithilfe unserer Interessengemeinschaft werden wir erste Projekte
+						aufbauen und so unser Wissen mit Praxisbezug erweitern.
 					</p>
 				</div>
 			</div>
@@ -138,8 +138,8 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 						Ideenschmiede
 					</h3>
 					<p class="text-base text-gray-500" data-config-id="desc3">
-						Baue mit deinem Team zusammen eine Idee auf und setze dein Vision um. Wir möchten dir
-						den geeignetten Rahmen dafür bieten und stehen dir bei den zukünftigen Herausforderungen
+						Baue mit deinem Team zusammen eine Idee auf und setze deine Vision um. Wir möchten dir
+						den geeigneten Rahmen dafür bieten und stehen dir bei den zukünftigen Herausforderungen
 						zur Seite.
 					</p>
 				</div>
@@ -148,14 +148,15 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 	</div>
 </section>
 <section class="py-16 px-4">
-	<div class="lg:mx-auto lg:max-w-7xl grid lg:grid-cols-2 gap-8">
+	<div class="mx-auto lg:max-w-7xl grid lg:grid-cols-2 gap-8">
 		<div class="relative">
 			<h2 class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 				Werde Teil unserer Interessengemeinschaft
 			</h2>
 			<p class="mt-4 max-w-2xl text-xl text-gray-500">
-				Wir setzen stark darauf, unsere Region für die Zukunft zu wadmen. Dafür vernetzen wir uns
-				mit Firmen und Instituten aus der Lausitz. [Hier fetching Text einfügen]
+				Wir setzen stark darauf, unsere Region für die Zukunft vorzubereiten. Dafür vernetzen wir
+				uns mit Firmen und Instituten aus der Lausitz. Möchtest du mit deinem Unternehmen ein Teil
+				davon sein? Falls ja, so kontaktiere uns.
 			</p>
 
 			<dl class="mt-10 space-y-10">
@@ -252,24 +253,25 @@ import InteressengemeinschaftIllustration from "$lib/svg/logos/illustrations/Int
 				</div>
 			</dl>
 		</div>
-		<div class="mx-auto w-full hidden md:block">
+		<div class="mx-auto w-4/5 hidden md:block">
 			<InteressengemeinschaftIllustration />
 		</div>
 	</div>
 </section>
 
-<section class="bg-blue-700 py-16 px-4">
+<section class="bg-blue-50 py-16 px-4">
 	<div class="lg:mx-auto lg:max-w-7xl text-center">
-		<h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+		<h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
 			<span class="block">Interesse geweckt?</span>
 			<span class="block">Dann nehme mit uns Kontakt auf.</span>
 		</h2>
-		<p class="mt-4 text-lg leading-6 text-blue-200">
-			Wir wollen unseren Teil am Strukturwandel tragen. Es exestieren so viele Möglichkeiten für unsere Region, lass uns eine Neue hinzufügen.
+		<p class="mt-4 text-lg leading-6 text-slate-500">
+			Wir wollen unseren Teil am Strukturwandel tragen. Es exestieren so viele Möglichkeiten für
+			unsere Region, lass uns eine Neue hinzufügen.
 		</p>
 		<a
 			href="#"
-			class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-500 bg-white hover:bg-blue-50 sm:w-auto"
+			class="mt-8 w-full inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 sm:w-auto"
 		>
 			Kontakt
 		</a>
