@@ -1,4 +1,4 @@
-<svg width="100%" height="auto" overflow="visible" viewBox="20.05 17 380.95 325" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%" overflow="visible" viewBox="20.05 17 380.95 325" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g fill="none" fill-rule="evenodd">
     <g transform="translate(19 42) scale(1.75)">
     <g fill-rule="evenodd">

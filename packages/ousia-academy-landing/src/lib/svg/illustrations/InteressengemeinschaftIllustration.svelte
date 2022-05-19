@@ -1,4 +1,4 @@
-<svg width="100%" height="auto" overflow="visible" viewBox="346.76 173.21 3269.5 3266.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%"  overflow="visible" viewBox="346.76 173.21 3269.5 3266.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <rect id="d" width="1483" height="888"/>
 <rect id="c" width="1483" height="888"/>
