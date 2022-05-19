@@ -248,7 +248,7 @@
 				Ausbildung liefern zu können.
 			</p>
 		</div>
-		<div class="mt-6 h-80 sm:h-96">
+		<div class="mt-6 w-4/5 sm:w-2/5 mx-auto">
 			<OurToDoIllustration />
 		</div>
 	</div>

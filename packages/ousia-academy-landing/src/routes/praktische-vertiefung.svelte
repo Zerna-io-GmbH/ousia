@@ -154,7 +154,7 @@ import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
 </section>
 
 <section class="px-4 py-16">
-	<div class="mx-auto max-w-7xl grid lg:grid-cols-2 gap-8">
+	<div class="mx-auto max-w-7xl">
 		<div class="relative">
 			<h2 class="text-base font-semibold tracking-wide text-blue-600 uppercase">
 				Moderne Entwicklungsverfahren
@@ -162,7 +162,10 @@ import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
 			<p class="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
 				Kommunikation, Management und der gesamte Rest
 			</p>
-			<dl class="mt-10 space-y-10">
+			
+		</div>
+		<div class="grid lg:grid-cols-2 gap-8 mt-10 ">
+			<dl class="space-y-10">
 				<div class="relative">
 					<dt>
 						<div
@@ -256,9 +259,10 @@ import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
 					</dd>
 				</div>
 			</dl>
+			<div class="mx-auto w-4/5 hidden md:block">
+				<PraxisnahesLernenIllustration />
+			</div>
 		</div>
-		<div class="mx-auto w-4/5 hidden md:block">
-			<PraxisnahesLernenIllustration />
-		</div>
+	
 	</div>
 </section>

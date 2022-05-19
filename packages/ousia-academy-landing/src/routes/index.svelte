@@ -44,16 +44,19 @@
 <section class="bg-slate-50 py-16 px-4">
 	<div class="lg:mx-auto lg:max-w-7xl ">
 		<div class="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24 mb-12">
-			<h2
-				class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-4 lg:mb-0"
-			>
-				<span data-config-id="03_header1">Unser</span>
-				<span class="text-blue-500" data-config-id="03_header2">Drei-Stufen-Plan</span>
-				<span data-config-id="03_header3 leading-relaxed" class=""
-					>für deinen Weg in die Zukunft.</span
-				>
-			</h2>
-			<p class="text-xl text-gray-500">
+			<div class="relative">
+				<h2 class="text-base font-semibold tracking-wide text-blue-600 uppercase">
+					Ausbildungsphasen
+				</h2>
+				<p class="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
+					<span data-config-id="03_header1">Unser</span>
+					<span class="text-blue-500" data-config-id="03_header2">Drei-Stufen-Plan</span>
+					<span data-config-id="03_header3 leading-relaxed" class=""
+						>für deinen Weg in die Zukunft.</span
+					>
+				</p>
+			</div>
+			<p class="mt-4 text-xl text-gray-500">
 				Das Internet entwickelt sich wie alle Technologien weiter. Wir sind darauf vorbereitet und
 				wir möchten, dass du es auch sein wirst. Mit unserem Programm werden wir sicherstellen, dass
 				du die Technologien und das Vorgehen beherrschst, um deine Ideen, oder Ideen von Anderen zum
@@ -148,18 +151,25 @@
 	</div>
 </section>
 <section class="py-16 px-4">
-	<div class="mx-auto lg:max-w-7xl grid lg:grid-cols-2 gap-8">
-		<div class="relative">
-			<h2 class="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-				Werde Teil unserer Interessengemeinschaft
-			</h2>
-			<p class="mt-4 max-w-2xl text-xl text-gray-500">
+	<div class="mx-auto lg:max-w-7xl">
+		<div class="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+			<div class="relative">
+				<h2 class="text-base font-semibold tracking-wide text-blue-600 uppercase">
+					Regionale Zusammenarbeit
+				</h2>
+				<p class="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
+					Werde Teil unserer Interessengemeinschaft
+				</p>
+			</div>
+			<p class="mt-4 text-xl text-gray-500">
 				Wir setzen stark darauf, unsere Region für die Zukunft vorzubereiten. Dafür vernetzen wir
 				uns mit Firmen und Instituten aus der Lausitz. Möchtest du mit deinem Unternehmen ein Teil
 				davon sein? Falls ja, so kontaktiere uns.
 			</p>
+		</div>
 
-			<dl class="mt-10 space-y-10">
+		<div class="grid lg:grid-cols-2 gap-8 mt-10">
+			<dl class="space-y-10">
 				<div class="relative">
 					<dt>
 						<div
@@ -252,9 +262,9 @@
 					</dd>
 				</div>
 			</dl>
-		</div>
-		<div class="mx-auto w-4/5 hidden md:block">
-			<InteressengemeinschaftIllustration />
+			<div class="mx-auto w-4/5 hidden md:block">
+				<InteressengemeinschaftIllustration />
+			</div>
 		</div>
 	</div>
 </section>
