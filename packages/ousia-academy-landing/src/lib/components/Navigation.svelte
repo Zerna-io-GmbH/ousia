@@ -4,6 +4,7 @@
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import { navigations } from '$lib/constants/navigation';
+	import { clickOutside } from '@ousia/application-ui/events';
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
 
@@ -69,7 +70,7 @@
 		</div>
 	</nav>
 	{#if mobileMenuOpened}
-		<div class="absolute z-30 top-0 inset-x-0 p-2 md:hidden " transition:fade={{ duration }}>
+		<div use:clickOutside on:click_outside={toggle} class="absolute z-30 top-0 inset-x-0 p-2 md:hidden " transition:fade={{ duration }}>
 			<div class="rounded-lg shadow-md bg-white  ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div class="px-5 pt-4 flex items-center justify-between">
 					<div class="h-8 w-auto">
