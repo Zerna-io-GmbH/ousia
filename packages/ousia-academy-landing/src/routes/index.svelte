@@ -1,6 +1,6 @@
 <script>
 	import ContactCta from '$lib/components/ContactCta.svelte';
-import InteressengemeinschaftIllustration from '$lib/svg/illustrations/InteressengemeinschaftIllustration.svelte';
+	import InteressengemeinschaftIllustration from '$lib/svg/illustrations/InteressengemeinschaftIllustration.svelte';
 </script>
 
 <section class="py-16 px-4">
@@ -269,4 +269,4 @@ import InteressengemeinschaftIllustration from '$lib/svg/illustrations/Interesse
 		</div>
 	</div>
 </section>
-<ContactCta/>
+<ContactCta />

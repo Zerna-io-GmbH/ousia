@@ -70,7 +70,12 @@
 		</div>
 	</nav>
 	{#if mobileMenuOpened}
-		<div use:clickOutside on:click_outside={toggle} class="absolute z-30 top-0 inset-x-0 p-2 md:hidden " transition:fade={{ duration }}>
+		<div
+			use:clickOutside
+			on:click_outside={toggle}
+			class="absolute z-30 top-0 inset-x-0 p-2 md:hidden "
+			transition:fade={{ duration }}
+		>
 			<div class="rounded-lg shadow-md bg-white  ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div class="px-5 pt-4 flex items-center justify-between">
 					<div class="h-8 w-auto">
@@ -112,7 +117,8 @@
 							<a
 								href={nav.path}
 								class:underline={$page.url.pathname === nav.path}
-								class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">{nav.name}</a
+								class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+								>{nav.name}</a
 							>
 						{/each}
 					</div>
