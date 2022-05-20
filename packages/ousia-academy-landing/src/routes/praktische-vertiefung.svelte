@@ -1,38 +1,39 @@
 <script lang="ts">
 	import PraxisnahesLernenIllustration from '$lib/svg/illustrations/PraxisnahesLernenIllustration.svelte';
 	import CheckmarkIcon from '$lib/svg/icons/CheckmarkIcon.svelte';
-import KommunikationIllustration from '$lib/svg/illustrations/KommunikationIllustration.svelte';
-import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
+	import KommunikationIllustration from '$lib/svg/illustrations/KommunikationIllustration.svelte';
+	import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
+	import ContactCta from '$lib/components/ContactCta.svelte';
 </script>
 
 <section class="py-16 px-4">
 	<div class="mx-auto max-w-7xl grid md:grid-cols-4 justify-center gap-8">
-        <div class="hidden md:block col-span-1">
-            <KommunikationIllustration />
-        </div>
-        <div class="md:col-span-2 space-y-6">
-            <div class="text-center">
-                <span
-                    class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-blue-100 text-blue-800"
-                >
-                    Praktische Vertiefung
-                </span>
-            </div>
-            <h1
-                class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl text-center"
-            >
-                <span>Learning by </span>
-                <span class="text-blue-500">Doing</span>
-            </h1>
-            <p class="max-w-2xl text-xl text-slate-500 text-center justify-self-center">
-                Lerne praktische Projektabläufe im Team und festige dein theoretisches Know-How. Mit realen
-                Projekten bereiten wir uns auf den Alltag der Softwareentwicklung vor - inbesondere auf
-                Murphys Gesetz.
-            </p>
-        </div>
-        <div class="hidden md:block col-span-1 w-4/5">
-            <ChatIllustration />
-        </div>
+		<div class="hidden md:block col-span-1">
+			<KommunikationIllustration />
+		</div>
+		<div class="md:col-span-2 space-y-6">
+			<div class="text-center">
+				<span
+					class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-blue-100 text-blue-800"
+				>
+					Praktische Vertiefung
+				</span>
+			</div>
+			<h1
+				class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl text-center"
+			>
+				<span>Learning by </span>
+				<span class="text-blue-500">Doing</span>
+			</h1>
+			<p class="max-w-2xl text-xl text-slate-500 text-center justify-self-center">
+				Lerne praktische Projektabläufe im Team und festige dein theoretisches Know-How. Mit realen
+				Projekten bereiten wir uns auf den Alltag der Softwareentwicklung vor - inbesondere auf
+				Murphys Gesetz.
+			</p>
+		</div>
+		<div class="hidden md:block col-span-1 w-4/5">
+			<ChatIllustration />
+		</div>
 	</div>
 </section>
 <section class="px-4 py-16 bg-slate-50">
@@ -162,7 +163,6 @@ import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
 			<p class="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
 				Kommunikation, Management und der gesamte Rest
 			</p>
-			
 		</div>
 		<div class="grid lg:grid-cols-2 gap-8 mt-10 ">
 			<dl class="space-y-10">
@@ -263,6 +263,6 @@ import ChatIllustration from '$lib/svg/illustrations/ChatIllustration.svelte';
 				<PraxisnahesLernenIllustration />
 			</div>
 		</div>
-	
 	</div>
 </section>
+<ContactCta />
