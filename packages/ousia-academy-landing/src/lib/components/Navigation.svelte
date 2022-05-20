@@ -62,7 +62,7 @@
 		</div>
 		<div class="hidden md:flex md:items-center md:space-x-6">
 			<a
-				href="#"
+				href="/kontakt"
 				class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
 			>
 				Kontakt
@@ -124,7 +124,7 @@
 					</div>
 					<div class="mt-6 px-5">
 						<a
-							href="#"
+							href="/kontakt"
 							class="block text-center w-full py-3 px-4 rounded-md shadow border border-transparent text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
 							>Kontakt</a
 						>

@@ -9,7 +9,7 @@
 			unsere Region, lass uns eine Neue hinzufügen.
 		</p>
 		<a
-			href="#"
+			href="/kontakt"
 			class="mt-8 w-full inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 sm:w-auto"
 		>
 			Kontakt
