@@ -1,6 +1,5 @@
 <svg
 	width="100%"
-	height="auto"
 	fill="none"
 	overflow="visible"
 	viewBox="370.47 408.8 255.5 229.95"
