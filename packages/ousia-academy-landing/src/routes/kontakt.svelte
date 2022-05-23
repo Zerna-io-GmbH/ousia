@@ -19,45 +19,43 @@
 </section>
 <section class="bg-slate-50 px-4 py-16">
 	<div class="mx-auto max-w-7xl">
-		<section class="lg:grid lg:grid-cols-3 lg:gap-8" aria-labelledby="contact-heading">
-			<h2 id="contact-heading" class="text-2xl font-extrabold text-slate-900 sm:text-3xl">
-				Get in touch
-			</h2>
-			<div
-				class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2"
-			>
-				<div>
-					<h3 class="text-lg font-medium text-slate-900">Leitung</h3>
-					<dl class="mt-2 text-base text-slate-500 space-y-1">
-						<div>
-							<dt class="sr-only">Email</dt>
-							<dd>
-								<a
-									class="font-medium text-blue-600 hover:text-blue-500"
-									href="mailto:michael@zerna.io">michael@zerna.io</a
-								>
-							</dd>
-						</div>
-						<div class="mt-1">
-							<dt class="sr-only">Phone number</dt>
-							<dd>
-								<a class="font-medium text-blue-600 hover:text-blue-500" href="tel:+4915255694273"
-									>+49 152 55694273</a
-								>
-							</dd>
-						</div>
-					</dl>
+		<div
+			class=" grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 text-center"
+		>
+			<div>
+				<h3 class="text-lg font-medium text-slate-900">Leitung</h3>
+				<div class="mt-2 text-base text-slate-500 space-y-1">
+					<p>Zerna.io GmbH</p>
 				</div>
-
-				<div>
-					<h3 class="text-lg font-medium text-warm-slate-900">Lokation</h3>
-					<div class="mt-2 text-base text-slate-500 space-y-1">
-						<p>Zerna.io GmbH</p>
-						<p>Ostrower Str. 4</p>
-						<p>03046 Cottbus</p>
+				<dl class="mt-2 text-base text-slate-500 space-y-1">
+					<div>
+						<dt class="sr-only">Email</dt>
+						<dd>
+							<a
+								class="font-medium text-blue-600 hover:text-blue-500"
+								href="mailto:michael@zerna.io">michael@zerna.io</a
+							>
+						</dd>
 					</div>
+					<div class="mt-1">
+						<dt class="sr-only">Phone number</dt>
+						<dd>
+							<a class="font-medium text-blue-600 hover:text-blue-500" href="tel:+4915255694273"
+								>+49 152 55694273</a
+							>
+						</dd>
+					</div>
+				</dl>
+			</div>
+
+			<div>
+				<h3 class="text-lg font-medium text-warm-slate-900">Lokation</h3>
+				<div class="mt-2 text-base text-slate-500 space-y-1">
+					<p>Zerna.io GmbH</p>
+					<p>Ostrower Str. 4</p>
+					<p>03046 Cottbus</p>
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
 </section>
