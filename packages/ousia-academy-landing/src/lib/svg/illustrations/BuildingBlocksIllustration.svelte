@@ -1,10 +1,10 @@
 <script lang="ts">
-    export let className = '';
+	export let className = '';
 </script>
 
 <svg
 	width="100%"
-    class="{className}"
+	class={className}
 	fill="none"
 	overflow="visible"
 	viewBox="140.52 173.44 740.95 624.89"

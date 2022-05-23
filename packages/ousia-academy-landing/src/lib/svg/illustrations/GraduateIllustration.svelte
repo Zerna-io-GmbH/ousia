@@ -2,10 +2,9 @@
 	export let className = '';
 </script>
 
-
 <svg
 	width="100%"
-    class="{className}"
+	class={className}
 	overflow="visible"
 	viewBox="172.5 210 255 180"
 	xmlns="http://www.w3.org/2000/svg"
