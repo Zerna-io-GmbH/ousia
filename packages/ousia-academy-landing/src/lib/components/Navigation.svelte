@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Duration } from '$lib/constants/animation';
-	import ZernaIoLogo from '$lib/svg/logos/ZernaIoLogo.svelte';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import { navigations } from '$lib/constants/navigation';
 	import { clickOutside } from '@ousia/application-ui/events';
+	import OusiaLogo from '$lib/svg/logos/OusiaLogo.svelte';
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
 
@@ -18,10 +18,8 @@
 		<div class="flex items-center flex-1">
 			<div class="flex items-center justify-between w-full md:w-auto">
 				<a href="/">
-					<span class="sr-only">Workflow</span>
-					<div class="h-8 w-auto sm:h-10">
-						<ZernaIoLogo />
-					</div>
+					<span class="sr-only">Ousia Akademie</span>
+					<OusiaLogo className="h-8 w-auto sm:h-10" />
 				</a>
 				<div class="-mr-2 flex items-center md:hidden">
 					<button
@@ -50,7 +48,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="hidden space-x-8 md:flex md:ml-10 w-full justify-center">
+			<div class="hidden space-x-8 md:flex w-full justify-center">
 				{#each navigations as nav}
 					<a
 						href={nav.path}
@@ -80,8 +78,8 @@
 				<div class="px-5 pt-4 flex items-center justify-between">
 					<div class="h-8 w-auto">
 						<a href="/">
-							<span class="sr-only">Workflow</span>
-							<ZernaIoLogo />
+							<span class="sr-only">Ousia Akademie</span>
+							<OusiaLogo className="h-8" />
 						</a>
 					</div>
 

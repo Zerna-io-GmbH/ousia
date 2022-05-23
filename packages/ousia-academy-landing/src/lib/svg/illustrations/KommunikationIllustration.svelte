@@ -1,5 +1,10 @@
+<script lang="ts">
+	export let className = '';
+</script>
+
 <svg
 	width="100%"
+	class={className}
 	overflow="visible"
 	viewBox="114.97 122.43 792.05 688.65"
 	xmlns="http://www.w3.org/2000/svg"

@@ -11,12 +11,10 @@
 </section>
 <section class="bg-slate-50 px-4 py-16">
 	<div class="mx-auto max-w-7xl prose">
-		<h1>
-			Datenschutzerklärung
-		</h1>
+		<h1>Datenschutzerklärung</h1>
 		<p>
-			Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung
-			(DSGVO), ist:
+			Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der
+			EU-Datenschutzgrundverordnung (DSGVO), ist:
 		</p>
 		<p>
 			Zerna.io GmbH
@@ -25,11 +23,13 @@
 		</p>
 		<h2>Ihre Betroffenenrechte</h2>
 		<p>
-			Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende
-			Rechte ausüben:
+			Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit
+			folgende Rechte ausüben:
 		</p>
 		<ul>
-			<li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),</li>
+			<li>
+				Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung (Art. 15 DSGVO),
+			</li>
 			<li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO),</li>
 			<li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO),</li>
 			<li>
@@ -75,9 +75,9 @@
 			berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).
 		</p>
 		<p>
-			Durch Bereitstellung des Kontaktformulars möchten wir Ihnen eine unkomplizierte Kontaktaufnahme
-			ermöglichen. Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der Anfrage sowie für
-			mögliche Anschlussfragen gespeichert.
+			Durch Bereitstellung des Kontaktformulars möchten wir Ihnen eine unkomplizierte
+			Kontaktaufnahme ermöglichen. Ihre gemachten Angaben werden zum Zwecke der Bearbeitung der
+			Anfrage sowie für mögliche Anschlussfragen gespeichert.
 		</p>
 		<p>
 			Sofern Sie mit uns Kontakt aufnehmen, um ein Angebot zu erfragen, erfolgt die Verarbeitung der
@@ -96,14 +96,14 @@
 		<h3>Bereitstellung vorgeschrieben oder erforderlich:</h3>
 		<p>
 			Die Bereitstellung Ihrer personenbezogenen Daten erfolgt freiwillig. Wir können Ihre Anfrage
-			jedoch nur bearbeiten, sofern Sie uns Ihren Namen, Ihre E-Mail-Adresse und den Grund der Anfrage
-			mitteilen.
+			jedoch nur bearbeiten, sofern Sie uns Ihren Namen, Ihre E-Mail-Adresse und den Grund der
+			Anfrage mitteilen.
 		</p>
 		<p />
 		<h2>SSL-Verschlüsselung</h2>
 		<p>
-			Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand
-			der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
+			Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen
+			Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.
 		</p>
 		<p />
 		<hr />
@@ -111,10 +111,10 @@
 		<h3>Einzelfallbezogenes Widerspruchsrecht</h3>
 		<p>
 			Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit
-			gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1 lit.
-			f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt, Widerspruch
-			einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im Sinne von Art. 4
-			Nr. 4 DSGVO.
+			gegen die Verarbeitung Sie betreffender personenbezogener Daten, die aufgrund Art. 6 Abs. 1
+			lit. f DSGVO (Datenverarbeitung auf der Grundlage einer Interessenabwägung) erfolgt,
+			Widerspruch einzulegen; dies gilt auch für ein auf diese Bestimmung gestütztes Profiling im
+			Sinne von Art. 4 Nr. 4 DSGVO.
 		</p>
 		<p>
 			Legen Sie Widerspruch ein, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es
@@ -138,8 +138,8 @@
 		</p>
 		<h2>Fragen an den Datenschutzbeauftragten</h2>
 		<p>
-			Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich
-			direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
+			Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie
+			sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:
 		</p>
 		<p />
 		<p>

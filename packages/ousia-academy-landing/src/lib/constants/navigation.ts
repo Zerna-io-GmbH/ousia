@@ -10,9 +10,5 @@ export const navigations = [
 	{
 		name: 'Ideenschmiede',
 		path: '/ideenschmiede'
-	},
-	{
-		name: 'Interessengemeinschaft',
-		path: '/interessengemeinschaft'
 	}
 ];
