@@ -8,7 +8,7 @@
 
 <section class="py-16 px-4">
 	<div class="mx-auto max-w-7xl grid md:grid-cols-4 justify-center gap-8">
-		<div class="hidden md:block col-span-1">
+		<div class="hidden md:block col-span-1 self-center">
 			<KommunikationIllustration />
 		</div>
 		<div class="md:col-span-2 space-y-6">
@@ -31,7 +31,7 @@
 				Murphys Gesetz.
 			</p>
 		</div>
-		<div class="hidden md:block col-span-1 w-4/5">
+		<div class="hidden md:block col-span-1 w-4/5 self-center">
 			<ChatIllustration />
 		</div>
 	</div>

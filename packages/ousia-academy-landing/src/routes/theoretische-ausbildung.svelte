@@ -9,29 +9,38 @@
 	import WebComponentsLogo from '$lib/svg/logos/WebComponentsLogo.svelte';
 	import GithubLogo from '$lib/svg/logos/GithubLogo.svelte';
 	import OurToDoIllustration from '$lib/svg/illustrations/OurToDoIllustration.svelte';
+	import HighFiveIllustration from '$lib/svg/illustrations/HighFiveIllustration.svelte';
+	import BuildingBlocksIllustration from '$lib/svg/illustrations/BuildingBlocksIllustration.svelte';
 </script>
 
 <section class="py-16 px-4">
-	<div class="mx-auto max-w-7xl grid gap-3 justify-center">
-		<div class="text-center">
-			<span
-				class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-blue-100 text-blue-800"
-			>
-				Theoretische Ausbildung
-			</span>
+	<div class="mx-auto max-w-7xl grid md:grid-cols-4 justify-center gap-8">
+		<div class="hidden md:block col-span-1 self-center">
+			<BuildingBlocksIllustration />
 		</div>
-		<h1
-			class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl text-center"
-		>
-			<span>Übernehme die</span>
-			<span class="text-blue-500">Kontrolle</span>
-			<span>über deine Zukunft.</span>
-		</h1>
-
-		<p class="mt-4 max-w-2xl text-xl text-slate-500 text-center justify-self-center">
-			Starte deinen Weg mit unseren Modulen. Lerne Design, Entwicklung, Management und
-			Bereitstellung von modernsten Web Applikationen.
-		</p>
+		<div class="md:col-span-2 space-y-6">
+			<div class="text-center">
+				<span
+					class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-blue-100 text-blue-800"
+				>
+					Theoretische Ausbildung
+				</span>
+			</div>
+			<h1
+				class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl text-center"
+			>
+				<span>Übernehme die</span>
+				<span class="text-blue-500">Kontrolle</span>
+				<span>über deine Zukunft.</span>
+			</h1>
+			<p class="max-w-2xl text-xl text-slate-500 text-center justify-self-center">
+				Starte deinen Weg mit unseren Modulen. Lerne Design, Entwicklung, Management und
+				Bereitstellung von modernsten Web Applikationen.
+			</p>
+		</div>
+		<div class="hidden md:block col-span-1 w-4/5 self-center">
+			<HighFiveIllustration />
+		</div>
 	</div>
 </section>
 <section class="bg-slate-50 px-4 py-16">
