@@ -5,6 +5,7 @@
 	import { page } from '$app/stores';
 	import { navigations } from '$lib/constants/navigation';
 	import { clickOutside } from '@ousia/application-ui/events';
+import OusiaFingerprintIcon from '$lib/svg/icons/OusiaFingerprintIcon.svelte';
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
 
@@ -19,9 +20,7 @@
 			<div class="flex items-center justify-between w-full md:w-auto">
 				<a href="/">
 					<span class="sr-only">Workflow</span>
-					<div class="h-8 w-auto sm:h-10">
-						<ZernaIoLogo />
-					</div>
+					<OusiaFingerprintIcon className="h-8 w-auto sm:h-10" />
 				</a>
 				<div class="-mr-2 flex items-center md:hidden">
 					<button
@@ -81,7 +80,7 @@
 					<div class="h-8 w-auto">
 						<a href="/">
 							<span class="sr-only">Workflow</span>
-							<ZernaIoLogo />
+							<OusiaFingerprintIcon className="h-8" />
 						</a>
 					</div>
 
