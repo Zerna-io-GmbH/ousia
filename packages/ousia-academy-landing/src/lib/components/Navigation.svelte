@@ -5,8 +5,16 @@
 	import { navigations } from '$lib/constants/navigation';
 	import { clickOutside } from '@ousia/application-ui/events';
 	import OusiaLogo from '$lib/svg/logos/OusiaLogo.svelte';
+	import { afterNavigate } from '$app/navigation';
+
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
+
+	afterNavigate(() => {
+		if (mobileMenuOpened) {
+			toggle();
+		}
+	});
 
 	function toggle(): void {
 		mobileMenuOpened = !mobileMenuOpened;
