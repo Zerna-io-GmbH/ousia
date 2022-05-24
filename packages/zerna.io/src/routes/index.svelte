@@ -13,7 +13,6 @@
 	import TailwindCssLogo from '$lib/svg/logos/TailwindCssLogo.svelte';
 	import TypescriptLogo from '$lib/svg/logos/TypescriptLogo.svelte';
 	import WebComponentsLogo from '$lib/svg/logos/WebComponentsLogo.svelte';
-	import { language } from '@ousia/application-ui/stores';
 	export let translations: TranslationUi;
 </script>
 
@@ -21,13 +20,6 @@
 	<title>Zerna.io</title>
 </svelte:head>
 
-<section class="pt-8">
-	<button
-		on:click={() => language.changeLanguage('de')}
-		class="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-		>{$language}</button
-	>
-</section>
 <section class="flex justify-center items-center overflow-hidden pt-8 sm:pt-24 pb-8">
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 		<div class="sm:text-center lg:text-left flex flex-col justify-center">
@@ -35,9 +27,6 @@
 				<span class="block">
 					{translations['landing.intro.betterWay.i']}
 				</span>
-				{#if process.browser}
-					<p>Your Preferred Language:{$language}</p>
-				{/if}
 				<span
 					class="block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400"
 				>
