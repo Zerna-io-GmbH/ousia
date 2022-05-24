@@ -1,9 +1,16 @@
 <script lang="ts">
+	import { afterNavigate } from '$app/navigation';
 	import { Duration } from '$lib/constants/animation';
 	import { fade } from 'svelte/transition';
 	import Logo from './Logo.svelte';
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
+
+	afterNavigate(() => {
+		if (mobileMenuOpened) {
+			toggle();
+		}
+	});
 
 	function toggle(): void {
 		mobileMenuOpened = !mobileMenuOpened;
