@@ -14,23 +14,37 @@
 		message: yup.string().max(500).required()
 	});
 
+	let submitResponse;
+	let submitInProgress = false;
+
 	const { form } = createForm<yup.InferType<typeof schema>>({
 		extend: [validator({ schema }), reporter],
-		onSubmit: async ({email, firstName, lastName, message, phone, subject}) => {
+		onSubmit: async ({ email, firstName, lastName, message, phone, subject }) => {
+			submitInProgress = true;
 			const res = await fetch('https://formsubmit.co/ajax/michael@zerna.io', {
 				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json'
+				},
 				body: JSON.stringify({
-					name: "ContactFormSubmit",
+					name: 'Zerna.io Contact',
 					email,
-					subject,
+					firstName,
+					lastName,
 					message,
-					phone
+					phone,
+					subject
 				})
 			});
-			const json = await res.json();
-			console.log(json);
+			submitResponse = await res.json();
 		}
 	});
+
+	const resetForm = () => {
+		submitInProgress = false;
+		submitResponse = undefined;
+	};
 </script>
 
 <section class="grid justify-items-center overflow-hidden pt-8 w-full max-w-7xl">
@@ -186,10 +200,10 @@
 						</span>
 					</dd>
 				</dl>
-				<ul role="list" class="mt-8 flex space-x-12">
+				<ul class="mt-8">
 					<li>
 						<a
-							class="text-indigo-200 hover:text-indigo-100"
+							class="text-indigo-200 hover:text-indigo-100 flex justify-end w-full"
 							href="https://github.com/Zerna-io-GmbH"
 						>
 							<span class="sr-only">GitHub</span>
@@ -211,73 +225,132 @@
 					</li>
 				</ul>
 			</div>
-			<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-				<h3 class="text-lg font-medium text-slate-900">Send us a message</h3>
-				<form use:form class="mt-6 grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-8">
-					<div>
-						<FormElement
-							name="firstName"
-							label="First Name"
-							autocomplete="first-name"
-							placeholder="Jon"
-							required
-						/>
+			{#if !submitResponse}
+				<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+					<h3 class="text-lg font-medium text-slate-900">Send us a message</h3>
+					<form use:form class="mt-6 grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-8">
+						<div>
+							<FormElement
+								name="firstName"
+								label="First Name"
+								autocomplete="first-name"
+								placeholder="Jon"
+								required
+							/>
+						</div>
+						<div>
+							<FormElement
+								name="lastName"
+								label="Last Name"
+								autocomplete="family-name"
+								placeholder="Doe"
+								required
+							/>
+						</div>
+						<div>
+							<FormElement
+								name="email"
+								type="email"
+								label="Email"
+								autocomplete="email"
+								placeholder="Jon@Doe.io"
+								required
+							/>
+						</div>
+						<div>
+							<FormElement
+								name="phone"
+								label="Phone"
+								autocomplete="phone"
+								placeholder="+1 (555) 555-5555"
+								note="Optional"
+							/>
+						</div>
+						<div class="sm:col-span-2">
+							<FormElement
+								name="subject"
+								label="Subject"
+								placeholder="What can we do for you?"
+								required
+							/>
+						</div>
+						<div class="sm:col-span-2">
+							<FormElement
+								name="message"
+								label="Message"
+								note="Max. 500 characters"
+								variant={FormElementVariant.Textarea}
+								required
+							/>
+						</div>
+						<div class="sm:col-span-2 sm:flex sm:justify-end">
+							<button
+								type="submit"
+								class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+								>Submit</button
+							>
+						</div>
+					</form>
+				</div>
+			{/if}
+
+			{#if submitResponse}
+				<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 flex flex-col justify-center">
+					<div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+						{#if submitResponse.success}
+							<svg
+								class="h-6 w-6 text-green-600"
+								x-description="Heroicon name: outline/check"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+							</svg>
+						{:else}
+							<svg
+								class="h-6 w-6 text-red-600"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+								/>
+							</svg>
+						{/if}
 					</div>
-					<div>
-						<FormElement
-							name="lastName"
-							label="Last Name"
-							autocomplete="family-name"
-							placeholder="Doe"
-							required
-						/>
+					<div class="mt-3 text-center sm:mt-5">
+						<h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+							{submitResponse.message}
+						</h3>
+						<div class="mt-2">
+							<p class="text-sm text-gray-500">
+								{#if submitResponse.success}
+									We have received your request and will get back to you as soon as possible.
+								{:else}
+									An error occurred while sending the request. Please try again later.
+								{/if}
+							</p>
+						</div>
+						<div class="mt-5 sm:mt-6 sm:flex sm:justify-end">
+							<button
+								on:click={resetForm}
+								class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:w-auto"
+								>Okay</button
+							>
+						</div>
 					</div>
-					<div>
-						<FormElement
-							name="email"
-							type="email"
-							label="Email"
-							autocomplete="email"
-							placeholder="Jon@Doe.io"
-							required
-						/>
-					</div>
-					<div>
-						<FormElement
-							name="phone"
-							label="Phone"
-							autocomplete="phone"
-							placeholder="+1 (555) 555-5555"
-							note="Optional"
-						/>
-					</div>
-					<div class="sm:col-span-2">
-						<FormElement
-							name="subject"
-							label="Subject"
-							placeholder="What can we do for you?"
-							required
-						/>
-					</div>
-					<div class="sm:col-span-2">
-						<FormElement
-							name="message"
-							label="Message"
-							note="Max. 500 characters"
-							variant={FormElementVariant.Textarea}
-							required
-						/>
-					</div>
-					<div class="sm:col-span-2 sm:flex sm:justify-end">
-						<button
-							type="submit"
-							class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
-							>Submit</button
-						>
-					</div>
-				</form>
-			</div>
+				</div>
+			{/if}
 		</div>
 	</div>
 </section>
-F
