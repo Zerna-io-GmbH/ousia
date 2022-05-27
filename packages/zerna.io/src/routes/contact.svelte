@@ -5,6 +5,7 @@
 	import * as yup from 'yup';
 	import { FormElement } from '@ousia/application-ui/components';
 	import { FormElementVariant } from '@ousia/application-ui/constants';
+	import { toggleLoading } from '@ousia/application-ui/stores/loading'
 
 	const schema = yup.object().shape({
 		firstName: yup.string().required(),
@@ -15,12 +16,11 @@
 	});
 
 	let submitResponse;
-	let submitInProgress = false;
 
 	const { form } = createForm<yup.InferType<typeof schema>>({
 		extend: [validator({ schema }), reporter],
 		onSubmit: async ({ email, firstName, lastName, message, phone, subject }) => {
-			submitInProgress = true;
+			toggleLoading();
 			const res = await fetch('https://formsubmit.co/ajax/michael@zerna.io', {
 				method: 'POST',
 				headers: {
@@ -38,11 +38,11 @@
 				})
 			});
 			submitResponse = await res.json();
+			toggleLoading();
 		}
 	});
 
 	const resetForm = () => {
-		submitInProgress = false;
 		submitResponse = undefined;
 	};
 </script>
