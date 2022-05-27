@@ -79,7 +79,7 @@
 		<div
 			use:clickOutside
 			on:click_outside={toggle}
-			class="absolute z-30 top-0 inset-x-0 p-2 md:hidden "
+			class="absolute z-50 top-0 inset-x-0 origin-top md:hidden "
 			transition:fade={{ duration }}
 		>
 			<div class="rounded-lg shadow-md bg-white  ring-1 ring-black ring-opacity-5 overflow-hidden">
