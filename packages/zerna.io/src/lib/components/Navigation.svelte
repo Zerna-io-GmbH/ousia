@@ -27,9 +27,7 @@
 			<div class="flex items-center justify-between w-full md:w-auto">
 				<a href="/">
 					<span class="sr-only">Workflow</span>
-					<div class="h-8 sm:h-10">
-						<Logo style="stroke-white" />
-					</div>
+					<Logo className="stroke-white h-8 w-auto sm:h-10" />
 				</a>
 				<div class="-mr-2 flex items-center md:hidden">
 					<button
@@ -82,7 +80,7 @@
 					<div class="h-8">
 						<a href="/">
 							<span class="sr-only">Workflow</span>
-							<Logo />
+							<Logo className="stroke-slate-900 h-8 w-auto sm:h-10" />
 						</a>
 					</div>
 

@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let style: string = 'stroke-slate-900';
+	export let className = '';
 </script>
 
 <svg
 	height="100%"
 	stroke-miterlimit="10"
-	class={style}
+	class={className}
 	version="1.1"
 	viewBox="0 0 500 500"
 	width="100%"
