@@ -21,13 +21,13 @@
 	}
 </script>
 
-<header class="pt-6 ">
+<header class="pt-6 max-w-7xl mx-auto">
 	<nav aria-label="Global" class="flex items-center justify-between">
 		<div class="flex items-center flex-1">
 			<div class="flex items-center justify-between w-full md:w-auto">
 				<a href="/">
 					<span class="sr-only">Workflow</span>
-					<div class="h-8 w-auto sm:h-10">
+					<div class="h-8 sm:h-10">
 						<Logo style="stroke-white" />
 					</div>
 				</a>
@@ -74,12 +74,12 @@
 		<div
 			use:clickOutside
 			on:click_outside={toggle}
-			class="absolute z-50 top-0 inset-x-0 origin-top md:hidden "
+			class="absolute z-50 top-0 inset-x-0 origin-top md:hidden px-1 pt-1"
 			transition:fade={{ duration }}
 		>
 			<div class="rounded-lg shadow-md bg-white  ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div class="px-5 pt-4 flex items-center justify-between">
-					<div class="h-8 w-auto">
+					<div class="h-8">
 						<a href="/">
 							<span class="sr-only">Workflow</span>
 							<Logo />
