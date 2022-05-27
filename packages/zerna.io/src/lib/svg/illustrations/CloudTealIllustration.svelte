@@ -165,8 +165,8 @@
 			y2="320.566"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint3_linear"
@@ -176,8 +176,8 @@
 			y2="421.206"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint4_linear"
@@ -209,8 +209,8 @@
 			y2="277.702"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint7_linear"
@@ -242,8 +242,8 @@
 			y2="435.467"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint10_linear"
@@ -264,8 +264,8 @@
 			y2="113.461"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint12_linear"
@@ -275,8 +275,8 @@
 			y2="171.925"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint13_linear"
@@ -286,8 +286,8 @@
 			y2="247.389"
 			gradientUnits="userSpaceOnUse"
 		>
-			<stop stop-color="#22D3EE" />
-			<stop offset="1" stop-color="#99F6E4" />
+			<stop stop-color="#514AE6" />
+			<stop offset="1" stop-color="#B6BBF0" />
 		</linearGradient>
 		<linearGradient
 			id="paint14_linear"

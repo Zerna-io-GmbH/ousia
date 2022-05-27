@@ -2,6 +2,10 @@
 	import { afterNavigate } from '$app/navigation';
 	import { Duration } from '$lib/constants/animation';
 	import { fade } from 'svelte/transition';
+	import { navigations } from '$lib/constants/navigation';
+	import { clickOutside } from '@ousia/application-ui/events';
+	import { page } from '$app/stores';
+
 	import Logo from './Logo.svelte';
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
@@ -55,26 +59,24 @@
 				</div>
 			</div>
 			<div class="hidden space-x-8 md:flex md:ml-10 justify-center">
-				<a href="/contact" class="text-base font-medium text-white hover:text-gray-300">Contact</a>
-				<a
-					sveltekit:prefetch
-					href="/terms"
-					class="text-base font-medium text-white hover:text-gray-300">Terms</a
-				>
+				{#each navigations as nav}
+					<a
+						href={nav.path}
+						sveltekit:prefetch
+						class:underline={$page.url.pathname === nav.path}
+						class="text-base font-medium text-white hover:text-slate-300">{nav.name}</a
+					>
+				{/each}
 			</div>
-		</div>
-		<div class="hidden md:flex md:items-center md:space-x-6">
-			<a href="#" class="text-base font-medium text-white hover:text-gray-300"> Log in </a>
-			<a
-				href="#"
-				class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-			>
-				Start free trial
-			</a>
 		</div>
 	</nav>
 	{#if mobileMenuOpened}
-		<div class="absolute z-50 top-0 inset-x-0 origin-top md:hidden " transition:fade={{ duration }}>
+		<div
+			use:clickOutside
+			on:click_outside={toggle}
+			class="absolute z-50 top-0 inset-x-0 origin-top md:hidden "
+			transition:fade={{ duration }}
+		>
 			<div class="rounded-lg shadow-md bg-white  ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div class="px-5 pt-4 flex items-center justify-between">
 					<div class="h-8 w-auto">
@@ -112,28 +114,14 @@
 				</div>
 				<div class="pt-5 pb-6">
 					<div class="px-2 space-y-1">
-						<a
-							href="/contact"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Contact</a
-						>
-						<a
-							href="/terms"
-							class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-							>Terms</a
-						>
-					</div>
-					<div class="mt-6 px-5">
-						<a
-							href="#"
-							class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700"
-							>Start free trial</a
-						>
-					</div>
-					<div class="mt-6 px-5">
-						<p class="text-center text-base font-medium text-gray-500">
-							Existing customer? <a href="#" class="text-gray-900 hover:underline">Login</a>
-						</p>
+						{#each navigations as nav}
+							<a
+								href={nav.path}
+								class:underline={$page.url.pathname === nav.path}
+								class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+								>{nav.name}</a
+							>
+						{/each}
 					</div>
 				</div>
 			</div>

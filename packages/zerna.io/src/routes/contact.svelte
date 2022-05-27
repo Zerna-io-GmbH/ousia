@@ -3,7 +3,6 @@
 	import { validator } from '@felte/validator-yup';
 	import { reporter } from '@felte/reporter-svelte';
 	import * as yup from 'yup';
-	import { animationExample } from '@ousia/application-ui/animations';
 	import { FormElement } from '@ousia/application-ui/components';
 	import { FormElementVariant } from '@ousia/application-ui/constants';
 
@@ -17,21 +16,29 @@
 
 	const { form } = createForm<yup.InferType<typeof schema>>({
 		extend: [validator({ schema }), reporter],
-		onSubmit: (values) => {
-			console.log(values);
+		onSubmit: async ({email, firstName, lastName, message, phone, subject}) => {
+			const res = await fetch('https://formsubmit.co/ajax/michael@zerna.io', {
+				method: 'POST',
+				body: JSON.stringify({
+					name: "ContactFormSubmit",
+					email,
+					subject,
+					message,
+					phone
+				})
+			});
+			const json = await res.json();
+			console.log(json);
 		}
 	});
 </script>
 
-<section class="grid justify-items-center overflow-hidden pt-8">
+<section class="grid justify-items-center overflow-hidden pt-8 w-full max-w-7xl">
 	<h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-6xl pb-12">Contact</h1>
-	<div class="bg-white overflow-hidden rounded-lg w-full max-w-5xl">
+	<div class="bg-white overflow-hidden rounded-lg max-w-7xl w-full">
 		<h2 class="sr-only">Contact us</h2>
 		<div class="grid grid-cols-1 lg:grid-cols-3">
-			<div
-				use:animationExample
-				class="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12"
-			>
+			<div class="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
 				<div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
 					<svg
 						class="absolute inset-0 w-full h-full"
@@ -130,8 +137,8 @@
 				</div>
 				<h3 class="text-lg font-medium text-white">Contact information</h3>
 				<p class="mt-6 text-base text-indigo-50 max-w-3xl">
-					Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet.
-					Sapien tortor lacus arcu.
+					Do you have any questions about our previous projects, or would you like to implement a
+					new project together? Then contact us.
 				</p>
 				<dl class="mt-8 space-y-6">
 					<dt><span class="sr-only">Phone number</span></dt>
@@ -152,7 +159,9 @@
 								d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
 							/>
 						</svg>
-						<span class="ml-3">+1 (555) 123-4567</span>
+						<span class="ml-3">
+							<a class="hover:text-indigo-300" href="tel:+4915255694273">+49 152 55694273</a>
+						</span>
 					</dd>
 					<dt><span class="sr-only">Email</span></dt>
 					<dd class="flex text-base text-indigo-50">
@@ -172,12 +181,17 @@
 								d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 							/>
 						</svg>
-						<span class="ml-3">support@workcation.com</span>
+						<span class="ml-3">
+							<a class="hover:text-indigo-300" href="mailto:michael@zerna.io">michael@zerna.io</a>
+						</span>
 					</dd>
 				</dl>
 				<ul role="list" class="mt-8 flex space-x-12">
 					<li>
-						<a class="text-indigo-200 hover:text-indigo-100" href="#">
+						<a
+							class="text-indigo-200 hover:text-indigo-100"
+							href="https://github.com/Zerna-io-GmbH"
+						>
 							<span class="sr-only">GitHub</span>
 							<svg
 								width="24"
@@ -195,29 +209,10 @@
 							</svg>
 						</a>
 					</li>
-					<li>
-						<a class="text-indigo-200 hover:text-indigo-100" href="#">
-							<span class="sr-only">Twitter</span>
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6"
-								aria-hidden="true"
-							>
-								<path
-									d="M7.548 22.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.02 10.02 0 0024 5.305a9.828 9.828 0 01-2.828.776 4.94 4.94 0 002.165-2.724 9.867 9.867 0 01-3.127 1.195 4.929 4.929 0 00-8.391 4.491A13.98 13.98 0 011.67 3.9a4.928 4.928 0 001.525 6.573A4.887 4.887 0 01.96 9.855v.063a4.926 4.926 0 003.95 4.827 4.917 4.917 0 01-2.223.084 4.93 4.93 0 004.6 3.42A9.88 9.88 0 010 20.289a13.941 13.941 0 007.548 2.209"
-									fill="currentColor"
-								/>
-							</svg>
-						</a>
-					</li>
 				</ul>
 			</div>
 			<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-				<h3 class="text-lg font-medium text-slate-900" use:animationExample>Send us a message</h3>
+				<h3 class="text-lg font-medium text-slate-900">Send us a message</h3>
 				<form use:form class="mt-6 grid grid-cols-1 gap-y-2 sm:grid-cols-2 sm:gap-x-8">
 					<div>
 						<FormElement
