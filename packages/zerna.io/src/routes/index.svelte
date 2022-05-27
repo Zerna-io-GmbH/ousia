@@ -28,7 +28,7 @@
 					{translations['landing.intro.betterWay.i']}
 				</span>
 				<span
-					class="block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400"
+					class="block bg-clip-text text-transparent bg-gradient-to-r from-slate-200 to-indigo-500"
 				>
 					{translations['landing.intro.betterWay.ii']}</span
 				>
@@ -45,7 +45,7 @@
 
 <section class="py-12 sm:py-20">
 	<div class="lg:text-center">
-		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">
+		<h2 class="text-base text-indigo-500 font-semibold tracking-wide uppercase">
 			{translations['landing.experience.heading']}
 		</h2>
 		<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
@@ -60,7 +60,7 @@
 			<div class="relative">
 				<dt>
 					<div
-						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-l from-indigo-600 to-indigo-500 text-white"
 					>
 						<CarIcon />
 					</div>
@@ -76,7 +76,7 @@
 			<div class="relative">
 				<dt>
 					<div
-						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+						class="absolute flex items-center justify-center h-12 w-12 rounded-md  bg-gradient-to-l from-indigo-600 to-indigo-500 text-slate-300"
 					>
 						<ShieldIcon />
 					</div>
@@ -92,7 +92,7 @@
 			<div class="relative">
 				<dt>
 					<div
-						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-l from-indigo-600 to-indigo-500 text-white"
 					>
 						<LightningBoldIcon />
 					</div>
@@ -108,7 +108,7 @@
 			<div class="relative">
 				<dt>
 					<div
-						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+						class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-gradient-to-l from-indigo-600 to-indigo-500 text-white"
 					>
 						<HeartIcon />
 					</div>
@@ -126,7 +126,7 @@
 
 <section class="py-12 sm:py-20">
 	<div class="lg:text-center">
-		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">
+		<h2 class="text-base text-indigo-500 font-semibold tracking-wide uppercase">
 			{translations['landing.techstack.heading']}
 		</h2>
 		<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-100 sm:text-4xl">
@@ -176,142 +176,6 @@
 			class="col-span-1 flex justify-center py-8 px-8 bg-slate-100 shadow-lg shadow-slate-100/20"
 		>
 			<GraphQlLogo />
-		</div>
-	</div>
-</section>
-
-<section>
-	<div class="lg:text-center">
-		<h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">
-			{translations['landing.blog.heading']}
-		</h2>
-		<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-100 sm:text-4xl">
-			{translations['landing.blog.intro']}
-		</p>
-		<p class="mt-4 text-xl text-slate-300 lg:mx-auto">
-			{translations['landing.blog.desc']}
-		</p>
-	</div>
-	<div class="grid gap-16 mt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-		<div class="flex flex-col overflow-hidden">
-			<div class="flex-1 pt-4 flex flex-col justify-between">
-				<div class="flex-1">
-					<span
-						class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800"
-					>
-						Badge
-					</span>
-					<a href="#" class="block mt-2">
-						<p class="text-xl font-semibold text-slate-100">Boost your conversion rate</p>
-						<p class="mt-3 text-base text-slate-300">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium
-							praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
-						</p>
-					</a>
-				</div>
-				<div class="mt-6 flex items-center">
-					<div class="flex-shrink-0">
-						<a href="#">
-							<span class="sr-only">Roel Aufderehar</span>
-							<img
-								class="h-10 w-10 rounded-full"
-								src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-								alt=""
-							/>
-						</a>
-					</div>
-					<div class="ml-3">
-						<p class="text-sm font-medium text-slate-100">
-							<a href="#" class="hover:underline"> Roel Aufderehar </a>
-						</p>
-						<div class="flex space-x-1 text-sm text-slate-300">
-							<time datetime="2020-03-16"> Mar 16, 2020 </time>
-							<span aria-hidden="true"> &middot; </span>
-							<span> 6 min read </span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="flex flex-col overflow-hidden">
-			<div class="flex-1 pt-4 flex flex-col justify-between">
-				<div class="flex-1">
-					<span
-						class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800"
-					>
-						Badge
-					</span>
-					<a href="#" class="block mt-2">
-						<p class="text-xl font-semibold text-slate-100">Boost your conversion rate</p>
-						<p class="mt-3 text-base text-slate-300">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium
-							praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
-						</p>
-					</a>
-				</div>
-				<div class="mt-6 flex items-center">
-					<div class="flex-shrink-0">
-						<a href="#">
-							<span class="sr-only">Roel Aufderehar</span>
-							<img
-								class="h-10 w-10 rounded-full"
-								src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-								alt=""
-							/>
-						</a>
-					</div>
-					<div class="ml-3">
-						<p class="text-sm font-medium text-slate-100">
-							<a href="#" class="hover:underline"> Roel Aufderehar </a>
-						</p>
-						<div class="flex space-x-1 text-sm text-slate-300">
-							<time datetime="2020-03-16"> Mar 16, 2020 </time>
-							<span aria-hidden="true"> &middot; </span>
-							<span> 6 min read </span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="flex flex-col overflow-hidden">
-			<div class="flex-1 pt-4 flex flex-col justify-between">
-				<div class="flex-1">
-					<span
-						class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800"
-					>
-						Badge
-					</span>
-					<a href="#" class="block mt-2">
-						<p class="text-xl font-semibold text-slate-100">Boost your conversion rate</p>
-						<p class="mt-3 text-base text-slate-300">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium
-							praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
-						</p>
-					</a>
-				</div>
-				<div class="mt-6 flex items-center">
-					<div class="flex-shrink-0">
-						<a href="#">
-							<span class="sr-only">Roel Aufderehar</span>
-							<img
-								class="h-10 w-10 rounded-full"
-								src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-								alt=""
-							/>
-						</a>
-					</div>
-					<div class="ml-3">
-						<p class="text-sm font-medium text-slate-100">
-							<a href="#" class="hover:underline"> Roel Aufderehar </a>
-						</p>
-						<div class="flex space-x-1 text-sm text-slate-300">
-							<time datetime="2020-03-16"> Mar 16, 2020 </time>
-							<span aria-hidden="true"> &middot; </span>
-							<span> 6 min read </span>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </section>
