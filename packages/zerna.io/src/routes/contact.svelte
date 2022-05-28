@@ -5,7 +5,7 @@
 	import * as yup from 'yup';
 	import { FormElement } from '@ousia/application-ui/components';
 	import { FormElementVariant } from '@ousia/application-ui/constants';
-	import { toggleLoading } from '@ousia/application-ui/stores/loading'
+	import { toggleLoading } from '@ousia/application-ui/stores/loading';
 
 	const schema = yup.object().shape({
 		firstName: yup.string().required(),

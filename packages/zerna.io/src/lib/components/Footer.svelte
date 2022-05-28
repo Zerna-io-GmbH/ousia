@@ -8,13 +8,19 @@
 		<nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
 			{#each navigations as nav}
 				<div class="px-5 py-2">
-					<a href={nav.path} class="text-base font-medium text-slate-300 hover:text-slate-600">{nav.name}</a>
+					<a href={nav.path} class="text-base font-medium text-slate-300 hover:text-slate-600"
+						>{nav.name}</a
+					>
 				</div>
 			{/each}
 		</nav>
 		<div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
 			<div class="flex space-x-6 md:order-2">
-				<a href="https://github.com/Zerna-io-GmbH" target="blank" class="text-gray-400 hover:text-gray-300">
+				<a
+					href="https://github.com/Zerna-io-GmbH"
+					target="blank"
+					class="text-gray-400 hover:text-gray-300"
+				>
 					<span class="sr-only">GitHub</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 						<path
@@ -25,9 +31,7 @@
 					</svg>
 				</a>
 			</div>
-			<p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-				&copy; 2022 Zerna.io GmbH
-			</p>
+			<p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">&copy; 2022 Zerna.io GmbH</p>
 		</div>
 	</div>
 </footer>
