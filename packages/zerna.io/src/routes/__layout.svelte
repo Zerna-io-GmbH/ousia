@@ -9,10 +9,12 @@
 <FullscreenLoader className="bg-indigo-50 opacity-25">
 	<DotsImpulse className="h-72 fill-indigo-900" />
 </FullscreenLoader>
-<OusiaAppLayout>
+<div class="relative max-w-7xl mx-auto px-4 lg:px-8">
 	<Navigation />
-	<main class="grid">
-		<slot />
-	</main>
+</div>
+<main class="grid">
+	<slot />
+</main>
+<div class="relative overflow-hidden max-w-7xl mx-auto px-4 lg:px-8">
 	<Footer />
-</OusiaAppLayout>
+</div>
