@@ -294,10 +294,12 @@
 						</form>
 					</div>
 				{/if}
-	
+
 				{#if submitResponse}
 					<div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 flex flex-col justify-center">
-						<div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+						<div
+							class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
+						>
 							{#if submitResponse.success}
 								<svg
 									class="h-6 w-6 text-green-600"
@@ -355,6 +357,4 @@
 			</div>
 		</div>
 	</section>
-	
 </div>
-

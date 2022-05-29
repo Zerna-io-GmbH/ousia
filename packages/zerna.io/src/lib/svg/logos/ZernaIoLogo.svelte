@@ -1,6 +1,6 @@
 <script>
 	export let className = '';
-    export let fontColor = 'white';
+	export let fontColor = 'white';
 </script>
 
 <svg
@@ -32,7 +32,6 @@
 		transform="translate(-17.198 -28.029)"
 		fill="none"
 		fill-rule="evenodd"
-	
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="20.384"
@@ -101,7 +100,8 @@
 			font-size="2.3006px"
 			stroke-miterlimit="10"
 			stroke-width=".14379"
-			><tspan x="-0.96817309" y="0.29716757" stroke="none" fill="{fontColor}" stroke-width=".046303">zerna.io</tspan
+			><tspan x="-0.96817309" y="0.29716757" stroke="none" fill={fontColor} stroke-width=".046303"
+				>zerna.io</tspan
 			></text
 		>
 	</g>

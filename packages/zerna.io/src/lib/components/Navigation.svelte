@@ -6,7 +6,7 @@
 	import { clickOutside } from '@ousia/application-ui/events';
 	import { page } from '$app/stores';
 	import ZernaIoIcon from '../svg/icons/ZernaIoIcon.svelte';
-	
+
 	let mobileMenuOpened = false;
 	let duration = Duration.Default;
 
