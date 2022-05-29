@@ -4,6 +4,10 @@ export const navigations = [
 		path: '/contact'
 	},
 	{
+		name: 'Focus',
+		path: '/focus'
+	},
+	{
 		name: 'Terms',
 		path: '/terms'
 	}
