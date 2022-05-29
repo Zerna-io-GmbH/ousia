@@ -17,7 +17,7 @@
 		</linearGradient><path d="" fill="url(#lg-0.24401162907952445)" opacity="0.4">
 			<animate
 				attributeName="d"
-				dur="33.333333333333336s"
+				dur="20"
 				repeatCount="indefinite"
 				keyTimes="0;0.333;0.667;1"
 				calcmod="spline"
@@ -28,7 +28,7 @@
 		</path><path d="" fill="url(#lg-0.24401162907952445)" opacity="0.4">
 			<animate
 				attributeName="d"
-				dur="33.333333333333336s"
+				dur="20"
 				repeatCount="indefinite"
 				keyTimes="0;0.333;0.667;1"
 				calcmod="spline"
@@ -39,7 +39,7 @@
 		</path><path d="" fill="url(#lg-0.24401162907952445)" opacity="0.4">
 			<animate
 				attributeName="d"
-				dur="33.333333333333336s"
+				dur="20"
 				repeatCount="indefinite"
 				keyTimes="0;0.333;0.667;1"
 				calcmod="spline"
@@ -50,7 +50,7 @@
 		</path><path d="" fill="url(#lg-0.24401162907952445)" opacity="0.4">
 			<animate
 				attributeName="d"
-				dur="33.333333333333336s"
+				dur="20"
 				repeatCount="indefinite"
 				keyTimes="0;0.333;0.667;1"
 				calcmod="spline"
