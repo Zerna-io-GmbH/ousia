@@ -1,7 +1,7 @@
 <script lang="ts">
-	import WaveAnimatedBackground from '$lib/svg/backrounds/WaveAnimatedBackground.svelte';
+	import ValleyAnimatedBackground from '$lib/svg/backrounds/ValleyAnimatedBackground.svelte';
 </script>
 
-<div class="overflow-hidden -mt-16 h-full">
-	<WaveAnimatedBackground />
+<div class="overflow-hidden h-full">
+	<ValleyAnimatedBackground />
 </div>
