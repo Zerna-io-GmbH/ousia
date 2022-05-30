@@ -161,13 +161,13 @@
 							</svg>
 						</div>
 						<p class="ml-16 text-lg leading-6 font-medium text-slate-900">
-							Web Anwendungen effizient managen
+							Rollen in einem Entwicklungsteam
 						</p>
 					</dt>
 					<dd class="mt-2 ml-16 text-base text-slate-500">
-						Mithilfe von etablierten Prozessen, werden wir feststellen, dass unsere Projekte auch in
-						Zukunft flexible genug bleiben. Somit stellen wir sicher, dass auch zukünftige Ideen
-						Platz in unserem Projekt haben.
+						Die Entwicklung von Web Anwendungen benötigt unterschiedliche Fähigkeiten. Wir werden
+						die Rollen wie Scrum Master, Project Owner, Designer, Tester und Programmierer genau
+						unter die Lupe nehmen.
 					</dd>
 				</div>
 				<div class="relative">
