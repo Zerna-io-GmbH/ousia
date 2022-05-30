@@ -31,7 +31,7 @@
 			>
 				<span>Übernehme die</span>
 				<span class="text-blue-500">Kontrolle</span>
-				<span>über deine Zukunft.</span>
+				<span>über deine Zukunft</span>
 			</h1>
 			<p class="max-w-2xl text-xl text-slate-500 text-center justify-self-center">
 				Starte deinen Weg mit unseren Modulen. Lerne Design, Entwicklung, Management und
